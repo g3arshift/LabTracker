@@ -282,12 +282,16 @@
 				* ExtraParts
 				* VirtualSystems
 				* isWhitebox
+				* rackID
 				* [ ] Networking Gear
 					* GearType
 				* [ ] VirtualSystem
-		* [ ] UPS
+		* [X] UPS
 			* WattCapacity
 			* RackUnitSize
+			* Voltage
+			* Num Ports
+			* plug type
 		* [ ] Components
 			* [ ] CPU
 				* CPUBrand
@@ -309,9 +313,6 @@
 				* type (dimm vs sodimm, etc)
 				* buffered
 				* ecc
-			* [ ] GPU
-				* GPUBrand
-				* VRAM
 			* [ ] PSU
 				* Wattage
 				* FormFactor
@@ -319,10 +320,10 @@
 			* [ ] Storage
 				* Capacity
 				* InterfaceType
-				* [ ] SSD
+				* [X] SSD
 					* Endurance
 					* Drive Writes Per Day
-				* [ ] HDD
+				* [X] HDD
 					* Workload Limit Rating
 					* Rotational speed
 					* Cache
@@ -331,22 +332,33 @@
 				* Size (optional, in rack units)
 			* [ ] Fans
 				* Size
+				* brand
 				* Thickness (optional)
 				* Speed
-				* Static Pressure
+				* airflow (measured in CFM)
+				* Static Pressure (measured in mm h20)
+				* connector type (PWM, DC, ETC)
+				* voltage
 			* [ ] Cooler
 				* CoolerType
+				* Brand (custom if set to CustomLoop)
 			* [ ] WatercoolingComponents
 				* [ ] Pumps
 					* PumpType
+					* PowerType
+					* Speed
 				* [ ] Fittings
 					* Size
+					* Brand
 				* [ ] Tubing
 					* Size
 				* [ ] Radiator
 					* NumFans
+					* Brand
 					* FanSize
-					* Fans
+					* FinDensity (fins per inch)
+					* Thickness (measured in mm)
+					* Material (copper, aluminum, etc)
 				* [ ] Waterblocks
 					* Socket
 			* [ ] PCIe Cards
@@ -359,7 +371,10 @@
 						* NumPorts
 						* PortSpeed
 						* PortType
-		* [ ] Rack
+					* [ ] GPU
+						* GPUBrand
+						* VRAM
+		* [X] Rack
 			* RackSize (in rack units)
 			* PostStyle
 	* [ ] Result
@@ -378,11 +393,11 @@
 ####Enums
 	* [ ] ResultType
 		* success, invalid, not_found
-	* [ ] Group
+	* [ ] Group - User can create new groups
 		* Admin (Same as edit but can load and backup DB), Edit, View, None (private, only visible and editable to owner and Admin)
-	* [ ] InventoryItemStatus
+	* [ ] InventoryItemStatus - User can create new groups
 		* Installed, In Storage, Purchased, Sold, To be purchased
-	* [ ] CaseStyle
+	* [ ] CaseStyle - User can create new groups
 		* RackMount, Desktop
 	* [ ] InterfaceType
 		* U.2, M.2, SAS2, SAS3, SATA, PCIe
@@ -394,27 +409,27 @@
 		* AMD, Intel
 	* [ ] GPUBrand
 		* AMD, Intel, Nvidia
-	* [ ] MotherboardFormFactor
+	* [ ] MotherboardFormFactor - User can create new groups
 		* MiniITX, MicroATX, ATX, EATX, XLATX, SSICEB, SSIEEB, SSIMEB
-	* [ ] PSUFormFactor
+	* [ ] PSUFormFactor - User can create new groups
 		* ATX, TFX, SFX, SFX-L
-	* [ ] FanSize (enum)
+	* [ ] FanSize
 		* 40, 60, 80, 92, 120, 140, 200
-	* [ ] PumpType
+	* [ ] PumpType - User can create new groups
 		* DDC, D5
 	* [ ] RackPostType
 		* TwoPost, FourPost
-	* [ ] ComputerType
+	* [ ] ComputerType - User can create new groups
 		* Server, Desktop
 	* [ ] PSUEfficiencyType
 		* Plus, Bronze, Silver, gold, Platinum, Titanium
-	* [ ] CoolerType
+	* [ ] CoolerType - User can create new groups
 		* AirTower, AIO, CustomLoop, Immersion
 	* [ ] StorageCardType
 		* HBA, RAID
-	* [ ] NetworkPortType
+	* [ ] NetworkPortType - User can create new groups
 		* Ethernet, Fiber
-	* [ ] NetworkGearType
+	* [ ] NetworkGearType - User can create new groups
 		* Switch, Router, Firewall
 
 
