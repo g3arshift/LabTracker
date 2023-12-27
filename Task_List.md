@@ -234,6 +234,7 @@
 		* [ ] findByUsername
 		* [ ] findByGroup
 * [ ] Services
+	* [ ] Validation
 	* [ ] GraphService (for creating graphs based on purchase history and dates)
 	* [ ] InventoryItemService
 		* [ ] add
