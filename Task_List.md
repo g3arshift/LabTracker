@@ -383,17 +383,22 @@
 					* Block Material
 			* [ ] PCIe Cards
 				* PcieSlotType
-					* [ ] StorageAdapters
+				* NumCaseSlotsOccupied
+					* [X] StorageAdapters
 						* NumPorts
 						* InterfaceType
 						* CardType
-					* [ ] Network Cards
+					* [X] Network Cards
 						* NumPorts
 						* PortSpeed
 						* PortType
 					* [ ] GPU
 						* GPUBrand
+						* Core speed
+						* Memory speed
 						* VRAM
+						* Length
+						* height
 		* [X] Rack
 			* RackSize (in rack units)
 			* PostStyle
