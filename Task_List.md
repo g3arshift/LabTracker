@@ -283,7 +283,6 @@
 				* ExtraParts
 				* VirtualSystems
 				* isWhitebox
-				* rackID
 				* [ ] Networking Gear
 					* GearType
 				* [ ] VirtualSystem
@@ -292,9 +291,10 @@
 			* RackUnitSize
 			* Voltage
 			* Num Ports
+			* port type
 			* plug type
 		* [ ] Components
-			* [ ] CPU
+			* [X] CPU
 				* CPUBrand
 				* BaseClock
 				* BoostClock
@@ -302,19 +302,21 @@
 				* ThreadCount
 				* ECoreCountPhysical
 				* Cache
-			* [ ] Motherboard
+			* [X] Motherboard
 				* CPUBrand
 				* Chipset
 				* SocketCount
 				* FormFactor
-			* [ ] RAM
+				* Socket
+			* [X] RAM
 				* Generation
 				* Capacity
 				* Speed
 				* type (dimm vs sodimm, etc)
 				* buffered
 				* ecc
-			* [ ] PSU
+				* numsticks
+			* [X] PSU
 				* Wattage
 				* FormFactor
 				* Efficiency
@@ -331,7 +333,7 @@
 			* [ ] Case
 				* CaseStyle
 				* Size (optional, in rack units)
-			* [ ] Fans
+			* [X] Fans
 				* Size
 				* brand
 				* Thickness (optional)
@@ -340,28 +342,31 @@
 				* Static Pressure (measured in mm h20)
 				* connector type (PWM, DC, ETC)
 				* voltage
-			* [ ] Cooler
+			* [X] Cooler
 				* CoolerType
 				* Brand (custom if set to CustomLoop)
 			* [ ] WatercoolingComponents
-				* [ ] Pumps
+				* [X] Pumps
 					* PumpType
 					* PowerType
 					* Speed
-				* [ ] Fittings
+				* [X] Fittings
 					* Size
 					* Brand
-				* [ ] Tubing
+				* [X] Tubing
 					* Size
-				* [ ] Radiator
+					* Length
+				* [X] Radiator
 					* NumFans
 					* Brand
 					* FanSize
 					* FinDensity (fins per inch)
 					* Thickness (measured in mm)
 					* Material (copper, aluminum, etc)
-				* [ ] Waterblocks
+				* [X] Waterblocks
 					* Socket
+					* Coldplate Material
+					* Block Material
 			* [ ] PCIe Cards
 				* PcieSlotType
 					* [ ] StorageAdapters
