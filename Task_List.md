@@ -287,7 +287,6 @@
 				* [ ] Networking Gear
 					* GearType
 				* [ ] VirtualSystem
-					* Name
 					* Host ID
 					* OS
 					* IP Address
@@ -342,9 +341,12 @@
 					* Workload Limit Rating
 					* Rotational speed
 					* Cache
-			* [ ] Case
+			* [X] SystemCase
 				* CaseStyle
 				* Size (optional, in rack units)
+				* Num 3.5" Drive bays
+				* Num 2.5" drive bays
+				* isRackmount
 			* [X] Fans
 				* Size
 				* brand
@@ -357,7 +359,7 @@
 			* [X] Cooler
 				* CoolerType
 				* Brand (custom if set to CustomLoop)
-			* [ ] WatercoolingComponents
+			* [X] Watercooling Components
 				* [X] Pumps
 					* PumpType
 					* PowerType
@@ -416,7 +418,7 @@
 	* [ ] InventoryItemStatus - User can create new groups
 		* Installed, In Storage, Purchased, Sold, To be purchased
 	* [ ] CaseStyle - User can create new groups
-		* RackMount, Desktop
+		* Like Full tower, XL Tower, Mini tower, etc
 	* [ ] InterfaceType
 		* U.2, M.2, SAS2, SAS3, SATA, PCIe
 	* [ ] PcieSlotType

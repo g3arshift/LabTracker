@@ -7673,3 +7673,640 @@ java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supporte
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 04:41:27.432467Z jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 04:54:00.651296Z jdbc[4]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 04:54:03.365295Z jdbc[5]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 06:16:02.668523Z jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 06:22:43.352966Z jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 06:22:43.394055Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT                not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    ""num_3.5_bays"" INTEGER,\000a    ""num_2.5_bays"" INTEGER,\000a    rackmount      BOOLEAN default FALSE not null,\000a    system_id      BIGINT,\000a    rack_id        BIGINT,\000a    constraint Case_pk\000a        primary key (inventory_item),\000a    constraint Case_inventoryitem_InventoryItem_id_fk\000a        foreign key (inventory_item) references ""InventoryItem""\000a            on delete cascade,\000a    constraint Case_rackid_Rack_inventory_item_fk\000a        foreign key (rack_id) references ""Rack""\000a            on delete set null,\000a    constraint Case_style_CaseStyle_name_fk\000a        foreign key (style) references ""CaseStyle""\000a            on delete set null,\000a    constraint Case_systemid_System_inventory_item_fk\000a        foreign key (system_id) references ""System""\000a            on delete set null\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT                not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    "num_3.5_bays" INTEGER,
+    "num_2.5_bays" INTEGER,
+    rackmount      BOOLEAN default FALSE not null,
+    system_id      BIGINT,
+    rack_id        BIGINT,
+    constraint Case_pk
+        primary key (inventory_item),
+    constraint Case_inventoryitem_InventoryItem_id_fk
+        foreign key (inventory_item) references "InventoryItem"
+            on delete cascade,
+    constraint Case_rackid_Rack_inventory_item_fk
+        foreign key (rack_id) references "Rack"
+            on delete set null,
+    constraint Case_style_CaseStyle_name_fk
+        foreign key (style) references "CaseStyle"
+            on delete set null,
+    constraint Case_systemid_System_inventory_item_fk
+        foreign key (system_id) references "System"
+            on delete set null
+) [42001-224]
+2023-12-29 06:23:17.044911Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT                not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    num_3half_bays INTEGER,\000a    num_2half_bays INTEGER,\000a    rackmount      BOOLEAN default FALSE not null,\000a    system_id      BIGINT,\000a    rack_id        BIGINT,\000a    constraint Case_pk\000a        primary key (inventory_item),\000a    constraint Case_inventoryitem_InventoryItem_id_fk\000a        foreign key (inventory_item) references ""InventoryItem""\000a            on delete cascade,\000a    constraint Case_rackid_Rack_inventory_item_fk\000a        foreign key (rack_id) references ""Rack""\000a            on delete set null,\000a    constraint Case_style_CaseStyle_name_fk\000a        foreign key (style) references ""CaseStyle""\000a            on delete set null,\000a    constraint Case_systemid_System_inventory_item_fk\000a        foreign key (system_id) references ""System""\000a            on delete set null\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT                not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    num_3half_bays INTEGER,
+    num_2half_bays INTEGER,
+    rackmount      BOOLEAN default FALSE not null,
+    system_id      BIGINT,
+    rack_id        BIGINT,
+    constraint Case_pk
+        primary key (inventory_item),
+    constraint Case_inventoryitem_InventoryItem_id_fk
+        foreign key (inventory_item) references "InventoryItem"
+            on delete cascade,
+    constraint Case_rackid_Rack_inventory_item_fk
+        foreign key (rack_id) references "Rack"
+            on delete set null,
+    constraint Case_style_CaseStyle_name_fk
+        foreign key (style) references "CaseStyle"
+            on delete set null,
+    constraint Case_systemid_System_inventory_item_fk
+        foreign key (system_id) references "System"
+            on delete set null
+) [42001-224]
+2023-12-29 06:23:31.416172Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    num_3half_bays INTEGER,\000a    num_2half_bays INTEGER,\000a    rackmount      BOOLEAN default FALSE,\000a    system_id      BIGINT,\000a    rack_id        BIGINT,\000a    constraint Case_pk\000a        primary key (inventory_item),\000a    constraint Case_inventoryitem_InventoryItem_id_fk\000a        foreign key (inventory_item) references ""InventoryItem""\000a            on delete cascade,\000a    constraint Case_rackid_Rack_inventory_item_fk\000a        foreign key (rack_id) references ""Rack""\000a            on delete set null,\000a    constraint Case_style_CaseStyle_name_fk\000a        foreign key (style) references ""CaseStyle""\000a            on delete set null,\000a    constraint Case_systemid_System_inventory_item_fk\000a        foreign key (system_id) references ""System""\000a            on delete set null\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    num_3half_bays INTEGER,
+    num_2half_bays INTEGER,
+    rackmount      BOOLEAN default FALSE,
+    system_id      BIGINT,
+    rack_id        BIGINT,
+    constraint Case_pk
+        primary key (inventory_item),
+    constraint Case_inventoryitem_InventoryItem_id_fk
+        foreign key (inventory_item) references "InventoryItem"
+            on delete cascade,
+    constraint Case_rackid_Rack_inventory_item_fk
+        foreign key (rack_id) references "Rack"
+            on delete set null,
+    constraint Case_style_CaseStyle_name_fk
+        foreign key (style) references "CaseStyle"
+            on delete set null,
+    constraint Case_systemid_System_inventory_item_fk
+        foreign key (system_id) references "System"
+            on delete set null
+) [42001-224]
+2023-12-29 06:23:39.981746Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT                not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    num_3half_bays INTEGER,\000a    num_2half_bays INTEGER,\000a    rackmount      BOOLEAN default FALSE not null,\000a    system_id      BIGINT,\000a    rack_id        BIGINT,\000a    constraint Case_pk\000a        primary key (inventory_item),\000a    constraint Case_inventoryitem_InventoryItem_id_fk\000a        foreign key (inventory_item) references ""InventoryItem""\000a            on delete cascade,\000a    constraint Case_rackid_Rack_inventory_item_fk\000a        foreign key (rack_id) references ""Rack""\000a            on delete set null,\000a    constraint Case_style_CaseStyle_name_fk\000a        foreign key (style) references ""CaseStyle""\000a            on delete set null,\000a    constraint Case_systemid_System_inventory_item_fk\000a        foreign key (system_id) references ""System""\000a            on delete set null\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT                not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    num_3half_bays INTEGER,
+    num_2half_bays INTEGER,
+    rackmount      BOOLEAN default FALSE not null,
+    system_id      BIGINT,
+    rack_id        BIGINT,
+    constraint Case_pk
+        primary key (inventory_item),
+    constraint Case_inventoryitem_InventoryItem_id_fk
+        foreign key (inventory_item) references "InventoryItem"
+            on delete cascade,
+    constraint Case_rackid_Rack_inventory_item_fk
+        foreign key (rack_id) references "Rack"
+            on delete set null,
+    constraint Case_style_CaseStyle_name_fk
+        foreign key (style) references "CaseStyle"
+            on delete set null,
+    constraint Case_systemid_System_inventory_item_fk
+        foreign key (system_id) references "System"
+            on delete set null
+) [42001-224]
+2023-12-29 06:23:41.918828Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT                not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    num_3half_bays INTEGER,\000a    num_2half_bays INTEGER,\000a    rackmount      BOOLEAN default FALSE not null,\000a    system_id      BIGINT,\000a    rack_id        BIGINT,\000a    constraint Case_pk\000a        primary key (inventory_item),\000a    constraint Case_inventoryitem_InventoryItem_id_fk\000a        foreign key (inventory_item) references ""InventoryItem""\000a            on delete cascade,\000a    constraint Case_rackid_Rack_inventory_item_fk\000a        foreign key (rack_id) references ""Rack""\000a            on delete set null,\000a    constraint Case_style_CaseStyle_name_fk\000a        foreign key (style) references ""CaseStyle""\000a            on delete set null,\000a    constraint Case_systemid_System_inventory_item_fk\000a        foreign key (system_id) references ""System""\000a            on delete set null\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT                not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    num_3half_bays INTEGER,
+    num_2half_bays INTEGER,
+    rackmount      BOOLEAN default FALSE not null,
+    system_id      BIGINT,
+    rack_id        BIGINT,
+    constraint Case_pk
+        primary key (inventory_item),
+    constraint Case_inventoryitem_InventoryItem_id_fk
+        foreign key (inventory_item) references "InventoryItem"
+            on delete cascade,
+    constraint Case_rackid_Rack_inventory_item_fk
+        foreign key (rack_id) references "Rack"
+            on delete set null,
+    constraint Case_style_CaseStyle_name_fk
+        foreign key (style) references "CaseStyle"
+            on delete set null,
+    constraint Case_systemid_System_inventory_item_fk
+        foreign key (system_id) references "System"
+            on delete set null
+) [42001-224]
+2023-12-29 06:24:19.276145Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    num_3half_bays INTEGER,\000a    num_2half_bays INTEGER,\000a    rackmount      BOOLEAN,\000a    system_id      BIGINT,\000a    rack_id        BIGINT,\000a    constraint Case_pk\000a        primary key (inventory_item),\000a    constraint Case_inventoryitem_InventoryItem_id_fk\000a        foreign key (inventory_item) references ""InventoryItem""\000a            on delete cascade,\000a    constraint Case_rackid_Rack_inventory_item_fk\000a        foreign key (rack_id) references ""Rack""\000a            on delete set null,\000a    constraint Case_style_CaseStyle_name_fk\000a        foreign key (style) references ""CaseStyle""\000a            on delete set null,\000a    constraint Case_systemid_System_inventory_item_fk\000a        foreign key (system_id) references ""System""\000a            on delete set null\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    num_3half_bays INTEGER,
+    num_2half_bays INTEGER,
+    rackmount      BOOLEAN,
+    system_id      BIGINT,
+    rack_id        BIGINT,
+    constraint Case_pk
+        primary key (inventory_item),
+    constraint Case_inventoryitem_InventoryItem_id_fk
+        foreign key (inventory_item) references "InventoryItem"
+            on delete cascade,
+    constraint Case_rackid_Rack_inventory_item_fk
+        foreign key (rack_id) references "Rack"
+            on delete set null,
+    constraint Case_style_CaseStyle_name_fk
+        foreign key (style) references "CaseStyle"
+            on delete set null,
+    constraint Case_systemid_System_inventory_item_fk
+        foreign key (system_id) references "System"
+            on delete set null
+) [42001-224]
+2023-12-29 06:24:45.167325Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    num_3half_bays INTEGER,\000a    num_2half_bays INTEGER,\000a    rackmount      BOOLEAN default FALSE,\000a    system_id      BIGINT,\000a    rack_id        BIGINT,\000a    constraint Case_pk\000a        primary key (inventory_item),\000a    constraint Case_inventoryitem_InventoryItem_id_fk\000a        foreign key (inventory_item) references ""InventoryItem""\000a            on delete cascade,\000a    constraint Case_rackid_Rack_inventory_item_fk\000a        foreign key (rack_id) references ""Rack""\000a            on delete set null,\000a    constraint Case_style_CaseStyle_name_fk\000a        foreign key (style) references ""CaseStyle""\000a            on delete set null,\000a    constraint Case_systemid_System_inventory_item_fk\000a        foreign key (system_id) references ""System""\000a            on delete set null\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    num_3half_bays INTEGER,
+    num_2half_bays INTEGER,
+    rackmount      BOOLEAN default FALSE,
+    system_id      BIGINT,
+    rack_id        BIGINT,
+    constraint Case_pk
+        primary key (inventory_item),
+    constraint Case_inventoryitem_InventoryItem_id_fk
+        foreign key (inventory_item) references "InventoryItem"
+            on delete cascade,
+    constraint Case_rackid_Rack_inventory_item_fk
+        foreign key (rack_id) references "Rack"
+            on delete set null,
+    constraint Case_style_CaseStyle_name_fk
+        foreign key (style) references "CaseStyle"
+            on delete set null,
+    constraint Case_systemid_System_inventory_item_fk
+        foreign key (system_id) references "System"
+            on delete set null
+) [42001-224]
+2023-12-29 06:24:58.206802Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    num_3half_bays INTEGER,\000a    num_2half_bays INTEGER,\000a    rackmount      BOOLEAN default FALSE,\000a    system_id      BIGINT,\000a    rack_id        BIGINT,\000a    constraint Case_pk\000a        primary key (inventory_item),\000a    constraint Case_inventoryitem_InventoryItem_id_fk\000a        foreign key (inventory_item) references ""InventoryItem""\000a            on delete cascade,\000a    constraint Case_rackid_Rack_inventory_item_fk\000a        foreign key (rack_id) references ""Rack""\000a            on delete set null,\000a    constraint Case_style_CaseStyle_name_fk\000a        foreign key (style) references ""CaseStyle""\000a            on delete set null,\000a    constraint Case_systemid_System_inventory_item_fk\000a        foreign key (system_id) references ""System""\000a            on delete set null\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    num_3half_bays INTEGER,
+    num_2half_bays INTEGER,
+    rackmount      BOOLEAN default FALSE,
+    system_id      BIGINT,
+    rack_id        BIGINT,
+    constraint Case_pk
+        primary key (inventory_item),
+    constraint Case_inventoryitem_InventoryItem_id_fk
+        foreign key (inventory_item) references "InventoryItem"
+            on delete cascade,
+    constraint Case_rackid_Rack_inventory_item_fk
+        foreign key (rack_id) references "Rack"
+            on delete set null,
+    constraint Case_style_CaseStyle_name_fk
+        foreign key (style) references "CaseStyle"
+            on delete set null,
+    constraint Case_systemid_System_inventory_item_fk
+        foreign key (system_id) references "System"
+            on delete set null
+) [42001-224]
+2023-12-29 06:25:40.048770Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    num_3half_bays INTEGER,\000a    num_2half_bays INTEGER,\000a    rackmount      BOOLEAN default FALSE,\000a    system_id      BIGINT,\000a    rack_id        BIGINT,\000a    constraint Case_pk\000a        primary key (inventory_item),\000a    constraint Case_inventoryitem_InventoryItem_id_fk\000a        foreign key (inventory_item) references ""InventoryItem""\000a            on delete cascade,\000a    constraint Case_rackid_Rack_inventory_item_fk\000a        foreign key (rack_id) references ""Rack""\000a            on delete set null,\000a    constraint Case_style_CaseStyle_name_fk\000a        foreign key (style) references ""CaseStyle""\000a            on delete set null,\000a    constraint Case_systemid_System_inventory_item_fk\000a        foreign key (system_id) references ""System""\000a            on delete set null\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    num_3half_bays INTEGER,
+    num_2half_bays INTEGER,
+    rackmount      BOOLEAN default FALSE,
+    system_id      BIGINT,
+    rack_id        BIGINT,
+    constraint Case_pk
+        primary key (inventory_item),
+    constraint Case_inventoryitem_InventoryItem_id_fk
+        foreign key (inventory_item) references "InventoryItem"
+            on delete cascade,
+    constraint Case_rackid_Rack_inventory_item_fk
+        foreign key (rack_id) references "Rack"
+            on delete set null,
+    constraint Case_style_CaseStyle_name_fk
+        foreign key (style) references "CaseStyle"
+            on delete set null,
+    constraint Case_systemid_System_inventory_item_fk
+        foreign key (system_id) references "System"
+            on delete set null
+) [42001-224]
+2023-12-29 06:25:45.703243Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    num_3half_bays INTEGER,\000a    num_2half_bays INTEGER,\000a    rackmount      BOOLEAN default FALSE,\000a    system_id      BIGINT,\000a    rack_id        BIGINT,\000a    constraint Case_pk\000a        primary key (inventory_item),\000a    constraint Case_inventoryitem_InventoryItem_id_fk\000a        foreign key (inventory_item) references ""InventoryItem""\000a            on delete cascade,\000a    constraint Case_style_CaseStyle_name_fk\000a        foreign key (style) references ""CaseStyle""\000a            on delete set null\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    num_3half_bays INTEGER,
+    num_2half_bays INTEGER,
+    rackmount      BOOLEAN default FALSE,
+    system_id      BIGINT,
+    rack_id        BIGINT,
+    constraint Case_pk
+        primary key (inventory_item),
+    constraint Case_inventoryitem_InventoryItem_id_fk
+        foreign key (inventory_item) references "InventoryItem"
+            on delete cascade,
+    constraint Case_style_CaseStyle_name_fk
+        foreign key (style) references "CaseStyle"
+            on delete set null
+) [42001-224]
+2023-12-29 06:25:48.642457Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    num_3half_bays INTEGER,\000a    num_2half_bays INTEGER,\000a    rackmount      BOOLEAN default FALSE,\000a    constraint Case_pk\000a        primary key (inventory_item),\000a    constraint Case_inventoryitem_InventoryItem_id_fk\000a        foreign key (inventory_item) references ""InventoryItem""\000a            on delete cascade,\000a    constraint Case_style_CaseStyle_name_fk\000a        foreign key (style) references ""CaseStyle""\000a            on delete set null\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    num_3half_bays INTEGER,
+    num_2half_bays INTEGER,
+    rackmount      BOOLEAN default FALSE,
+    constraint Case_pk
+        primary key (inventory_item),
+    constraint Case_inventoryitem_InventoryItem_id_fk
+        foreign key (inventory_item) references "InventoryItem"
+            on delete cascade,
+    constraint Case_style_CaseStyle_name_fk
+        foreign key (style) references "CaseStyle"
+            on delete set null
+) [42001-224]
+2023-12-29 06:25:57.784095Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    num_3half_bays INTEGER,\000a    num_2half_bays INTEGER,\000a    rackmount      BOOLEAN default FALSE,\000a    constraint Case_pk\000a        primary key (inventory_item)\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    num_3half_bays INTEGER,
+    num_2half_bays INTEGER,
+    rackmount      BOOLEAN default FALSE,
+    constraint Case_pk
+        primary key (inventory_item)
+) [42001-224]
+2023-12-29 06:26:00.232120Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    num_3half_bays INTEGER,\000a    num_2half_bays INTEGER,\000a    constraint Case_pk\000a        primary key (inventory_item)\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    num_3half_bays INTEGER,
+    num_2half_bays INTEGER,
+    constraint Case_pk
+        primary key (inventory_item)
+) [42001-224]
+2023-12-29 06:26:02.040823Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT not null,\000a    style          VARCHAR(50),\000a    size           INTEGER,\000a    constraint Case_pk\000a        primary key (inventory_item)\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT not null,
+    style          VARCHAR(50),
+    size           INTEGER,
+    constraint Case_pk
+        primary key (inventory_item)
+) [42001-224]
+2023-12-29 06:26:06.837759Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT not null,\000a    constraint Case_pk\000a        primary key (inventory_item)\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT not null,
+    constraint Case_pk
+        primary key (inventory_item)
+) [42001-224]
+2023-12-29 06:26:11.450921Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case"; expected "identifier"; SQL statement:
+create table Case [42001-224]
+2023-12-29 06:26:15.889952Z jdbc[4]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 06:26:19.589007Z jdbc[5]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 06:26:48.138604Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case\000a(\000a    inventory_item BIGINT not null,\000a    constraint Case_pk\000a        primary key (inventory_item),\000a    constraint Case_InventoryItem_id_fk\000a        foreign key (inventory_item) references ""InventoryItem""\000a            on delete cascade\000a)"; expected "identifier"; SQL statement:
+create table Case
+(
+    inventory_item BIGINT not null,
+    constraint Case_pk
+        primary key (inventory_item),
+    constraint Case_InventoryItem_id_fk
+        foreign key (inventory_item) references "InventoryItem"
+            on delete cascade
+) [42001-224]
+2023-12-29 06:27:04.942881Z jdbc[6]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 06:27:36.789291Z jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 06:27:36.912293Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]Case"; expected "identifier"; SQL statement:
+create table Case [42001-224]
+2023-12-29 06:27:51.006866Z jdbc[4]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 06:30:33.009567Z jdbc[5]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 06:33:06.591572Z jdbc[6]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 06:34:04.801594Z jdbc[7]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2023-12-29 06:38:38.987029Z jdbc[8]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1626)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
