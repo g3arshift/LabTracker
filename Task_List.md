@@ -304,7 +304,7 @@
 			* Num Ports
 			* port type
 			* plug type
-		* [ ] Components
+		* [X] Components
 			* [X] CPU
 				* CPUBrand
 				* BaseClock
@@ -381,7 +381,7 @@
 					* Socket
 					* Coldplate Material
 					* Block Material
-			* [ ] PCIe Cards
+			* [X] PCIe Cards
 				* PcieSlotType
 				* NumCaseSlotsOccupied
 					* [X] StorageAdapters
@@ -392,7 +392,7 @@
 						* NumPorts
 						* PortSpeed
 						* PortType
-					* [ ] GPU
+					* [X] GPU
 						* GPUBrand
 						* Core speed
 						* Memory speed
