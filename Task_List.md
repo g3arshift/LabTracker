@@ -318,7 +318,7 @@
 				* Wattage
 				* FormFactor
 				* Efficiency
-			* [ ] Storage
+			* [X] Storage
 				* Capacity
 				* InterfaceType
 				* [X] SSD
@@ -420,7 +420,7 @@
 		* DDC, D5
 	* [ ] RackPostType
 		* TwoPost, FourPost
-	* [ ] ComputerType - User can create new groups
+	* [ ] SystemType - User can create new groups
 		* Server, Desktop
 	* [ ] PSUEfficiencyType
 		* Plus, Bronze, Silver, gold, Platinum, Titanium
