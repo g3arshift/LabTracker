@@ -283,9 +283,21 @@
 				* ExtraParts
 				* VirtualSystems
 				* isWhitebox
+				* OS Name
 				* [ ] Networking Gear
 					* GearType
 				* [ ] VirtualSystem
+					* Name
+					* Host ID
+					* OS
+					* IP Address
+					* [ ] VM
+						* RAM
+						* core count
+						* Storage ID
+					* [ ] Container
+						* Host Port
+						* Container Port
 		* [X] UPS
 			* WattCapacity
 			* RackUnitSize
