@@ -264,8 +264,8 @@
 	* [ ] Constructor
 	* [ ] Getters
 	* [ ] Setters
-		* [ ] NetworkedInventoryItem
-			* [ ] System
+		* [X] NetworkedInventoryItem
+			* [X] System
 				* ComputerType
 				* IPAddress
 				* ManagementIPAddress (optional)
@@ -280,21 +280,24 @@
 				* Storage
 				* Cooling
 				* PCIe Cards
-				* ExtraParts
+				* ExtraParts (This is the "location" variable in an inventory item)
 				* VirtualSystems
 				* isWhitebox
 				* OS Name
-				* [ ] Networking Gear
+				* [X] Networking Gear
 					* GearType
-				* [ ] VirtualSystem
+					* ManagementIPAddress
+					* additional IP Addresses
+					* Ports
+				* [X] VirtualSystem
 					* Host ID
 					* OS
 					* IP Address
-					* [ ] VM
+					* [X] VM
 						* RAM
 						* core count
 						* Storage ID
-					* [ ] Container
+					* [X] Container
 						* Host Port
 						* Container Port
 		* [X] UPS
