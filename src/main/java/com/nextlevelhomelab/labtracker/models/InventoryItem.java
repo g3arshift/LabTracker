@@ -1,5 +1,6 @@
 package com.nextlevelhomelab.labtracker.models;
 
+import com.nextlevelhomelab.labtracker.config.LabTrackerProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,10 +19,18 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class InventoryItem {
 
+
+    public InventoryItem() {
+        //TODO: Check if a file exists at labTrackerProperties.imageDirectory + "/name" + "-id" + "/image.png" and if it doesn't go to default image. Also, gallery images are on the path labTrackerProperties.imageDirectory + "/name" + "-id" + "/gallery" + _sequential number. Probably want to grab the last file name in the folder and get its digit + 1.
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private long id;
+
+    @Transient
+    private LabTrackerProperties labTrackerProperties;
 
     /**
      * The base image of an inventory item that appears
