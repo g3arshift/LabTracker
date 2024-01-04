@@ -264,8 +264,8 @@
 	* [ ] Constructor
 	* [ ] Getters
 	* [ ] Setters
-		* [ ] NetworkedInventoryItem
-			* [ ] System
+		* [X] NetworkedInventoryItem
+			* [X] System
 				* ComputerType
 				* IPAddress
 				* ManagementIPAddress (optional)
@@ -280,21 +280,35 @@
 				* Storage
 				* Cooling
 				* PCIe Cards
-				* ExtraParts
+				* ExtraParts (This is the "location" variable in an inventory item)
 				* VirtualSystems
 				* isWhitebox
-				* rackID
-				* [ ] Networking Gear
+				* OS Name
+				* [X] Networking Gear
 					* GearType
-				* [ ] VirtualSystem
+					* ManagementIPAddress
+					* additional IP Addresses
+					* Ports
+				* [X] VirtualSystem
+					* Host ID
+					* OS
+					* IP Address
+					* [X] VM
+						* RAM
+						* core count
+						* Storage ID
+					* [X] Container
+						* Host Port
+						* Container Port
 		* [X] UPS
 			* WattCapacity
 			* RackUnitSize
 			* Voltage
 			* Num Ports
+			* port type
 			* plug type
-		* [ ] Components
-			* [ ] CPU
+		* [X] Components
+			* [X] CPU
 				* CPUBrand
 				* BaseClock
 				* BoostClock
@@ -302,23 +316,25 @@
 				* ThreadCount
 				* ECoreCountPhysical
 				* Cache
-			* [ ] Motherboard
+			* [X] Motherboard
 				* CPUBrand
 				* Chipset
 				* SocketCount
 				* FormFactor
-			* [ ] RAM
+				* Socket
+			* [X] RAM
 				* Generation
 				* Capacity
 				* Speed
 				* type (dimm vs sodimm, etc)
 				* buffered
 				* ecc
-			* [ ] PSU
+				* numsticks
+			* [X] PSU
 				* Wattage
 				* FormFactor
 				* Efficiency
-			* [ ] Storage
+			* [X] Storage
 				* Capacity
 				* InterfaceType
 				* [X] SSD
@@ -328,10 +344,13 @@
 					* Workload Limit Rating
 					* Rotational speed
 					* Cache
-			* [ ] Case
+			* [X] SystemCase
 				* CaseStyle
 				* Size (optional, in rack units)
-			* [ ] Fans
+				* Num 3.5" Drive bays
+				* Num 2.5" drive bays
+				* isRackmount
+			* [X] Fans
 				* Size
 				* brand
 				* Thickness (optional)
@@ -340,41 +359,49 @@
 				* Static Pressure (measured in mm h20)
 				* connector type (PWM, DC, ETC)
 				* voltage
-			* [ ] Cooler
+			* [X] Cooler
 				* CoolerType
 				* Brand (custom if set to CustomLoop)
-			* [ ] WatercoolingComponents
-				* [ ] Pumps
+			* [X] Watercooling Components
+				* [X] Pumps
 					* PumpType
 					* PowerType
 					* Speed
-				* [ ] Fittings
+				* [X] Fittings
 					* Size
 					* Brand
-				* [ ] Tubing
+				* [X] Tubing
 					* Size
-				* [ ] Radiator
+					* Length
+				* [X] Radiator
 					* NumFans
 					* Brand
 					* FanSize
 					* FinDensity (fins per inch)
 					* Thickness (measured in mm)
 					* Material (copper, aluminum, etc)
-				* [ ] Waterblocks
+				* [X] Waterblocks
 					* Socket
-			* [ ] PCIe Cards
+					* Coldplate Material
+					* Block Material
+			* [X] PCIe Cards
 				* PcieSlotType
-					* [ ] StorageAdapters
+				* NumCaseSlotsOccupied
+					* [X] StorageAdapters
 						* NumPorts
 						* InterfaceType
 						* CardType
-					* [ ] Network Cards
+					* [X] Network Cards
 						* NumPorts
 						* PortSpeed
 						* PortType
-					* [ ] GPU
+					* [X] GPU
 						* GPUBrand
+						* Core speed
+						* Memory speed
 						* VRAM
+						* Length
+						* height
 		* [X] Rack
 			* RackSize (in rack units)
 			* PostStyle
@@ -399,7 +426,7 @@
 	* [ ] InventoryItemStatus - User can create new groups
 		* Installed, In Storage, Purchased, Sold, To be purchased
 	* [ ] CaseStyle - User can create new groups
-		* RackMount, Desktop
+		* Like Full tower, XL Tower, Mini tower, etc
 	* [ ] InterfaceType
 		* U.2, M.2, SAS2, SAS3, SATA, PCIe
 	* [ ] PcieSlotType
@@ -420,7 +447,7 @@
 		* DDC, D5
 	* [ ] RackPostType
 		* TwoPost, FourPost
-	* [ ] ComputerType - User can create new groups
+	* [ ] SystemType - User can create new groups
 		* Server, Desktop
 	* [ ] PSUEfficiencyType
 		* Plus, Bronze, Silver, gold, Platinum, Titanium
