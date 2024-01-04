@@ -264,8 +264,8 @@
 	* [ ] Constructor
 	* [ ] Getters
 	* [ ] Setters
-		* [X] NetworkedInventoryItem
-			* [X] System
+		* [ ] NetworkedInventoryItem
+			* [ ] System
 				* ComputerType
 				* IPAddress
 				* ManagementIPAddress (optional)
@@ -284,31 +284,31 @@
 				* VirtualSystems
 				* isWhitebox
 				* OS Name
-				* [X] Networking Gear
+				* [ ] Networking Gear
 					* GearType
 					* ManagementIPAddress
 					* additional IP Addresses
 					* Ports
-				* [X] VirtualSystem
+				* [ ] VirtualSystem
 					* Host ID
 					* OS
 					* IP Address
-					* [X] VM
+					* [ ] VM
 						* RAM
 						* core count
 						* Storage ID
-					* [X] Container
+					* [ ] Container
 						* Host Port
 						* Container Port
-		* [X] UPS
+		* [ ] UPS
 			* WattCapacity
 			* RackUnitSize
 			* Voltage
 			* Num Ports
 			* port type
 			* plug type
-		* [X] Components
-			* [X] CPU
+		* [ ] Components
+			* [ ] CPU
 				* CPUBrand
 				* BaseClock
 				* BoostClock
@@ -316,13 +316,13 @@
 				* ThreadCount
 				* ECoreCountPhysical
 				* Cache
-			* [X] Motherboard
+			* [ ] Motherboard
 				* CPUBrand
 				* Chipset
 				* SocketCount
 				* FormFactor
 				* Socket
-			* [X] RAM
+			* [ ] RAM
 				* Generation
 				* Capacity
 				* Speed
@@ -330,27 +330,27 @@
 				* buffered
 				* ecc
 				* numsticks
-			* [X] PSU
+			* [ ] PSU
 				* Wattage
 				* FormFactor
 				* Efficiency
-			* [X] Storage
+			* [ ] Storage
 				* Capacity
 				* InterfaceType
-				* [X] SSD
+				* [ ] SSD
 					* Endurance
 					* Drive Writes Per Day
-				* [X] HDD
+				* [ ] HDD
 					* Workload Limit Rating
 					* Rotational speed
 					* Cache
-			* [X] SystemCase
+			* [ ] SystemCase
 				* CaseStyle
 				* Size (optional, in rack units)
 				* Num 3.5" Drive bays
 				* Num 2.5" drive bays
 				* isRackmount
-			* [X] Fans
+			* [ ] Fans
 				* Size
 				* brand
 				* Thickness (optional)
@@ -359,50 +359,50 @@
 				* Static Pressure (measured in mm h20)
 				* connector type (PWM, DC, ETC)
 				* voltage
-			* [X] Cooler
+			* [ ] Cooler
 				* CoolerType
 				* Brand (custom if set to CustomLoop)
-			* [X] Watercooling Components
-				* [X] Pumps
+			* [ ] Watercooling Components
+				* [ ] Pumps
 					* PumpType
 					* PowerType
 					* Speed
-				* [X] Fittings
+				* [ ] Fittings
 					* Size
 					* Brand
-				* [X] Tubing
+				* [ ] Tubing
 					* Size
 					* Length
-				* [X] Radiator
+				* [ ] Radiator
 					* NumFans
 					* Brand
 					* FanSize
 					* FinDensity (fins per inch)
 					* Thickness (measured in mm)
 					* Material (copper, aluminum, etc)
-				* [X] Waterblocks
+				* [ ] Waterblocks
 					* Socket
 					* Coldplate Material
 					* Block Material
-			* [X] PCIe Cards
+			* [ ] PCIe Cards
 				* PcieSlotType
 				* NumCaseSlotsOccupied
-					* [X] StorageAdapters
+					* [ ] StorageAdapters
 						* NumPorts
 						* InterfaceType
 						* CardType
-					* [X] Network Cards
+					* [ ] Network Cards
 						* NumPorts
 						* PortSpeed
 						* PortType
-					* [X] GPU
+					* [ ] GPU
 						* GPUBrand
 						* Core speed
 						* Memory speed
 						* VRAM
 						* Length
 						* height
-		* [X] Rack
+		* [ ] Rack
 			* RackSize (in rack units)
 			* PostStyle
 	* [ ] Result
@@ -419,41 +419,41 @@
 		
 		
 ####Enums
-	* [ ] ResultType
+	* [X] ResultType
 		* success, invalid, not_found
 	* [ ] Group - User can create new groups
 		* Admin (Same as edit but can load and backup DB), Edit, View, None (private, only visible and editable to owner and Admin)
 	* [ ] InventoryItemStatus - User can create new groups
-		* Installed, In Storage, Purchased, Sold, To be purchased
+		* Installed, In Storage, Purchased, Sold, To be purchased, Broken
 	* [ ] CaseStyle - User can create new groups
 		* Like Full tower, XL Tower, Mini tower, etc
-	* [ ] InterfaceType
+	* [X] InterfaceType
 		* U.2, M.2, SAS2, SAS3, SATA, PCIe
-	* [ ] PcieSlotType
+	* [X] PcieSlotType
 		* x1, x4, x8, x16
-	* [ ] RAMGeneration
+	* [X] RAMGeneration
 		* DDR2, DDR3, DDR4, DDR5
-	* [ ] CPUBrand
+	* [X] CPUBrand
 		* AMD, Intel
-	* [ ] GPUBrand
+	* [X] GPUBrand
 		* AMD, Intel, Nvidia
 	* [ ] MotherboardFormFactor - User can create new groups
 		* MiniITX, MicroATX, ATX, EATX, XLATX, SSICEB, SSIEEB, SSIMEB
 	* [ ] PSUFormFactor - User can create new groups
 		* ATX, TFX, SFX, SFX-L
-	* [ ] FanSize
+	* [ ] FanSize - User can create new groups
 		* 40, 60, 80, 92, 120, 140, 200
 	* [ ] PumpType - User can create new groups
 		* DDC, D5
-	* [ ] RackPostType
+	* [X] RackPostType
 		* TwoPost, FourPost
 	* [ ] SystemType - User can create new groups
 		* Server, Desktop
-	* [ ] PSUEfficiencyType
+	* [X] PSUEfficiencyType
 		* Plus, Bronze, Silver, gold, Platinum, Titanium
 	* [ ] CoolerType - User can create new groups
 		* AirTower, AIO, CustomLoop, Immersion
-	* [ ] StorageCardType
+	* [X] StorageCardType
 		* HBA, RAID
 	* [ ] NetworkPortType - User can create new groups
 		* Ethernet, Fiber
