@@ -3,8 +3,10 @@ package com.nextlevelhomelab.labtracker.models;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 
+import java.io.IOException;
+
 @Entity
-public class Ram extends InventoryItem{
+public class Ram extends InventoryItem {
     @Column(name = "generation", length = 6)
     private String generation;
 
@@ -25,4 +27,7 @@ public class Ram extends InventoryItem{
 
     @Column(name = "num_sticks")
     private Integer numSticks;
+
+    public Ram() throws IOException {
+    }
 }

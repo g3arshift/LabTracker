@@ -7,7 +7,10 @@ import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.Clob;
 import java.time.LocalDateTime;
@@ -19,9 +22,18 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class InventoryItem {
 
-
-    public InventoryItem() {
-        //TODO: Check if a file exists at labTrackerProperties.imageDirectory + "/name" + "-id" + "/image.png" and if it doesn't go to default image. Also, gallery images are on the path labTrackerProperties.imageDirectory + "/name" + "-id" + "/gallery" + _sequential number. Probably want to grab the last file name in the folder and get its digit + 1.
+    public InventoryItem() throws IOException {
+        try {
+            File imageFile = new File(String.format("%s/%s_%s_image.png", labTrackerProperties.getImageDirectory(), name, id));
+            if (imageFile.exists()) {
+                baseImage = ImageIO.read(imageFile);
+            } else
+                baseImage = labTrackerProperties.getDefaultImage();
+        } catch (IOException e) {
+            throw new IOException(e);
+        }
+        //TODO: Setup Gallery variable init
+        //Gallery images are on the path labTrackerProperties.imageDirectory + "/name" + "_id" + "/gallery" + current time.
     }
 
     @Id
@@ -35,7 +47,6 @@ public class InventoryItem {
     /**
      * The base image of an inventory item that appears
      */
-    //TODO: Set default to a default image
     @Transient
     private BufferedImage baseImage;
 
@@ -87,4 +98,10 @@ public class InventoryItem {
     @OnDelete(action = OnDeleteAction.RESTRICT)
     @JoinColumn(name = "last_updated_by", nullable = false)
     private User lastUpdatedBy;
+
+    /**
+     * The required permission level to EDIT this object.
+     */
+    @Column(name = "permission_level_required", nullable = false)
+    private PermissionLevel permissionLevelRequired;
 }

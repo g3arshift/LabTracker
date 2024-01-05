@@ -421,8 +421,12 @@
 ####Enums
 	* [X] ResultType
 		* success, invalid, not_found
-	* [ ] Group - User can create new groups
-		* Admin (Same as edit but can load and backup DB), Edit, View, None (private, only visible and editable to owner and Admin)
+	* [X] PermissionLevel
+		* Admin, User, View
+		* Each permission level contains all other permissions below it.
+			* Admin can load and backup DB, as well as delete and edit objects that don't belong to them
+			* User can't backup or load DB, but can edit and delete objects that belong to them and view ALL objects
+			* View can only view objects, but cannot modify the data in any way.
 	* [ ] InventoryItemStatus - User can create new groups
 		* Installed, In Storage, Purchased, Sold, To be purchased, Broken
 	* [ ] CaseStyle - User can create new groups
