@@ -12,9 +12,14 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Clob;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Getter
 @Setter
@@ -23,8 +28,9 @@ import java.util.List;
 public class InventoryItem {
 
     public InventoryItem() throws IOException {
+        //Load the base image for a file, or if not found, load the default.
         try {
-            File imageFile = new File(String.format("%s/%s_%s_image.png", labTrackerProperties.getImageDirectory(), name, id));
+            File imageFile = new File(String.format("%s/%s/%s_image.png", labTrackerProperties.getImageDirectory(), id, name));
             if (imageFile.exists()) {
                 baseImage = ImageIO.read(imageFile);
             } else
@@ -32,8 +38,22 @@ public class InventoryItem {
         } catch (IOException e) {
             throw new IOException(e);
         }
-        //TODO: Setup Gallery variable init
-        //Gallery images are on the path labTrackerProperties.imageDirectory + "/name" + "_id" + "/gallery" + current time.
+
+        //Load all gallery images
+        //Get list of files for all files in a given directory and make sure they are regular files.
+        try (Stream<Path> paths = Files.walk(Paths.get(String.format("%s/%s/%s/gallery", labTrackerProperties.getImageDirectory(), id, name)), 1)) {
+            List<File> filesInFolder = paths
+                    .filter(Files::isRegularFile)
+                    .map(Path::toFile)
+                    .toList();
+
+            //Make sure our files are an accepted image format, and load them into the gallery.
+            for(File f : filesInFolder) {
+                if(labTrackerProperties.getAcceptedImageTypes().contains(Files.probeContentType(f.toPath()))) {
+                    gallery.add(ImageIO.read(f));
+                }
+            }
+        }
     }
 
     @Id

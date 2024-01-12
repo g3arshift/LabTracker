@@ -9,6 +9,8 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -22,6 +24,13 @@ public class LabTrackerProperties {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        acceptedImageTypes = new ArrayList<>();
+
+        acceptedImageTypes.add("image/avif");
+        acceptedImageTypes.add("image/jpeg");
+        acceptedImageTypes.add("image/png");
+        acceptedImageTypes.add("image/webp");
     }
 
     private String databaseDirectory = "./data";
@@ -29,4 +38,6 @@ public class LabTrackerProperties {
     private String imageDirectory = "./images";
 
     private BufferedImage defaultImage;
+
+    private List<String> acceptedImageTypes;
 }

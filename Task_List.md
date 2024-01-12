@@ -241,6 +241,8 @@
 		* [ ] delete
 		* [ ] update
 		* [ ] findAll
+		* [ ] updateBaseImage
+		* [ ] addImageToGallery (gallery final name extensions are _currentTimestamp)
 	* [ ] UserService
 * [ ] Controllers
 * [ ] Security
@@ -250,9 +252,9 @@
 		* Password
 		* Group
 	* [ ] InventoryItem
-	*** NOTE, THE BELOW FIELDS WILL NEED TO BE DEFAULT ACCESS TYPE
 	* Name
 	* Picture (*THIS WILL BE STORED AS A FILE ON THE USERS SYSTEM)
+	* Gallery (Supports AVIF, JPEG, PNG, and WebP)
 	* BuyPrice
 	* SellPrice
 	* ItemURL (a link to where it was bought or can be purchased)
