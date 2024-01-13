@@ -2,6 +2,7 @@ package com.nextlevelhomelab.labtracker.models;
 
 import com.nextlevelhomelab.labtracker.config.LabTrackerProperties;
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
@@ -22,6 +23,7 @@ import java.util.stream.Stream;
 
 @Getter
 @Setter
+@EqualsAndHashCode
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public class InventoryItem {
@@ -42,7 +44,6 @@ public class InventoryItem {
         //Get list of files for all files in a given directory and make sure they are regular files.
         try (Stream<Path> paths = Files.walk(Paths.get(String.format("%s/%s/%s/gallery", labTrackerProperties.getImageDirectory(), id, name)), 1)) {
             List<File> filesInFolder = paths
-                    .filter(Files::isRegularFile)
                     .map(Path::toFile)
                     .toList();
 
@@ -58,7 +59,7 @@ public class InventoryItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private long id;
+    private Long id;
 
     @Transient
     private LabTrackerProperties labTrackerProperties;

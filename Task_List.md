@@ -247,26 +247,29 @@
 * [ ] Controllers
 * [ ] Security
 * [ ] Models
-	* [ ] User
+	* [X] User
 		* Username
 		* Password
+		* first name
+		* last name
 		* Group
-	* [ ] InventoryItem
-	* Name
-	* Picture (*THIS WILL BE STORED AS A FILE ON THE USERS SYSTEM)
-	* Gallery (Supports AVIF, JPEG, PNG, and WebP)
-	* BuyPrice
-	* SellPrice
-	* ItemURL (a link to where it was bought or can be purchased)
-	* Notes
-	* EditGroup (list of groups that can edit this item)
-	* Status
-	* UserItem
-	* Owner
-	* [ ] Constructor
-	* [ ] Getters
-	* [ ] Setters
-		* [ ] NetworkedInventoryItem
+	* [X] InventoryItem
+		* id
+		* Name
+		* Picture (*THIS WILL BE STORED AS A FILE ON THE USERS SYSTEM)
+		* Gallery (Supports AVIF, JPEG, PNG, and WebP)
+		* location
+		* BuyPrice
+		* SellPrice
+		* ItemURL (a link to where it was bought or can be purchased)
+		* Notes
+		* EditGroup (list of groups that can edit this item)
+		* Status
+		* UserItem
+		* Owner
+		* [X] Constructor
+		* [X] Getters
+		* [X] Setters
 			* [ ] System
 				* ComputerType
 				* IPAddress
@@ -310,7 +313,7 @@
 			* port type
 			* plug type
 		* [ ] Components
-			* [ ] CPU
+			* [X] CPU
 				* CPUBrand
 				* BaseClock
 				* BoostClock
@@ -324,7 +327,7 @@
 				* SocketCount
 				* FormFactor
 				* Socket
-			* [ ] RAM
+			* [X] RAM
 				* Generation
 				* Capacity
 				* Speed
@@ -336,17 +339,17 @@
 				* Wattage
 				* FormFactor
 				* Efficiency
-			* [ ] Storage
+			* [X] Storage
 				* Capacity
 				* InterfaceType
-				* [ ] SSD
+				* [X] SSD
 					* Endurance
 					* Drive Writes Per Day
-				* [ ] HDD
+				* [X] HDD
 					* Workload Limit Rating
 					* Rotational speed
 					* Cache
-			* [ ] SystemCase
+			* [X] SystemCase
 				* CaseStyle
 				* Size (optional, in rack units)
 				* Num 3.5" Drive bays

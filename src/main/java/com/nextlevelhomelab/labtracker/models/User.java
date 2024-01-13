@@ -1,8 +1,6 @@
 package com.nextlevelhomelab.labtracker.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,4 +21,7 @@ public class User {
 
     @Column(name = "last_name", length = 100)
     private String lastName;
+
+    @Column(name = "group", nullable = false)
+    private String group;
 }

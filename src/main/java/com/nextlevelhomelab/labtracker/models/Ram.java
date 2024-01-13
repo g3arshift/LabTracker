@@ -1,12 +1,22 @@
 package com.nextlevelhomelab.labtracker.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.io.IOException;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 public class Ram extends InventoryItem {
+
     @Column(name = "generation", length = 6)
     private String generation;
 
@@ -27,7 +37,4 @@ public class Ram extends InventoryItem {
 
     @Column(name = "num_sticks")
     private Integer numSticks;
-
-    public Ram() throws IOException {
-    }
 }
