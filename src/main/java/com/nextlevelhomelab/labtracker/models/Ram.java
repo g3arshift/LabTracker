@@ -13,9 +13,16 @@ import java.io.IOException;
 
 @Getter
 @Setter
+@OnDelete(action = OnDeleteAction.CASCADE)
 @NoArgsConstructor
 @Entity
 public class Ram extends InventoryItem {
+
+    @MapsId
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JoinColumn(name = "id", nullable = false)
+    private InventoryItem inventoryItem;
 
     @Column(name = "generation", length = 6)
     private String generation;

@@ -1,8 +1,6 @@
 package com.nextlevelhomelab.labtracker.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,6 +13,12 @@ import org.hibernate.annotations.OnDeleteAction;
 @NoArgsConstructor
 @Entity
 public class SystemCase extends InventoryItem{
+
+    @MapsId
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JoinColumn(name = "id", nullable = false)
+    private InventoryItem inventoryItem;
 
     @ManyToOne
     @OnDelete(action = OnDeleteAction.SET_NULL)
