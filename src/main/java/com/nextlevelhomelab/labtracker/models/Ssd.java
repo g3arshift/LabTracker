@@ -8,7 +8,6 @@ import org.hibernate.annotations.OnDeleteAction;
 
 @Getter
 @Setter
-@OnDelete(action = OnDeleteAction.CASCADE)
 @Entity
 public class Ssd extends Storage{
 

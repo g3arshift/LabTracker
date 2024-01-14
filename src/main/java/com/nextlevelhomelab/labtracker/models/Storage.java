@@ -10,7 +10,6 @@ import org.hibernate.annotations.OnDeleteAction;
 
 @Getter
 @Setter
-@OnDelete(action = OnDeleteAction.CASCADE)
 @NoArgsConstructor
 @Entity
 public class Storage extends InventoryItem{

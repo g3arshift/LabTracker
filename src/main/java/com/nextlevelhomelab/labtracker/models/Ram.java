@@ -4,16 +4,11 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import java.io.IOException;
-
 @Getter
 @Setter
-@OnDelete(action = OnDeleteAction.CASCADE)
 @NoArgsConstructor
 @Entity
 public class Ram extends InventoryItem {
