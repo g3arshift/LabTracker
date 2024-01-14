@@ -355,7 +355,7 @@
 				* Num 3.5" Drive bays
 				* Num 2.5" drive bays
 				* isRackmount
-			* [ ] Fans
+			* [X] Fans
 				* Size
 				* thickness
 				* speed

@@ -1,4 +1,4 @@
-package com.nextlevelhomelab.labtracker.models;
+package com.nextlevelhomelab.labtracker.models.repository;
 
 import jakarta.persistence.*;
 import lombok.Getter;

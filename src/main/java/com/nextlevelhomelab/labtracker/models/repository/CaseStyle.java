@@ -1,4 +1,4 @@
-package com.nextlevelhomelab.labtracker.models;
+package com.nextlevelhomelab.labtracker.models.repository;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,9 +9,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Group {
+public class CaseStyle {
 
     @Id
-    @Column(name = "name", nullable = false, length = 100)
+    @Column(name = "name", nullable = false, length = 50)
     private String name;
 }

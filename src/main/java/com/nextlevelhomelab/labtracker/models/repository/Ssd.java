@@ -1,4 +1,4 @@
-package com.nextlevelhomelab.labtracker.models;
+package com.nextlevelhomelab.labtracker.models.repository;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -10,7 +10,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
-public class Hdd extends Storage{
+public class Ssd extends Storage{
 
     @MapsId
     @OneToOne(fetch = FetchType.LAZY, optional = false)
@@ -18,13 +18,10 @@ public class Hdd extends Storage{
     @JoinColumn(name = "id", nullable = false)
     private Storage storage;
 
-    @Column(name = "workload_limit_rating")
-    private Integer workloadLimitRating;
+    @Comment("Measured in gigabytes")
+    @Column(name = "endurance")
+    private Integer endurance;
 
-    @Comment("Measured in RPM")
-    @Column(name = "speed")
-    private Integer speed;
-
-    @Column(name = "cache")
-    private Float cache;
+    @Column(name = "drive_writes_per_day")
+    private Integer driveWritesPerDay;
 }
