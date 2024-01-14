@@ -9,9 +9,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class CaseStyle {
+public class FanSize {
 
     @Id
-    @Column(name = "name", nullable = false, length = 50)
-    private String name;
+    @Column(name = "size", nullable = false)
+    private Integer size;
 }

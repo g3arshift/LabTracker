@@ -22,7 +22,7 @@ public class SystemCase extends InventoryItem{
 
     @ManyToOne
     @OnDelete(action = OnDeleteAction.SET_NULL)
-    @Column(name = "style")
+    @JoinColumn(name = "style")
     private CaseStyle caseStyle;
 
     @Comment("Measured in rack units")

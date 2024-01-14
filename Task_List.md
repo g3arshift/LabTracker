@@ -357,9 +357,9 @@
 				* isRackmount
 			* [ ] Fans
 				* Size
+				* thickness
+				* speed
 				* brand
-				* Thickness (optional)
-				* Speed
 				* airflow (measured in CFM)
 				* Static Pressure (measured in mm h20)
 				* connector type (PWM, DC, ETC)
@@ -434,7 +434,7 @@
 			* View can only view objects, but cannot modify the data in any way.
 	* [ ] InventoryItemStatus - User can create new groups
 		* Installed, In Storage, Purchased, Sold, To be purchased, Broken
-	* [ ] CaseStyle - User can create new groups
+	* [X] CaseStyle - User can create new groups
 		* Like Full tower, XL Tower, Mini tower, etc
 	* [X] InterfaceType
 		* U.2, M.2, SAS2, SAS3, SATA, PCIe
@@ -450,7 +450,7 @@
 		* MiniITX, MicroATX, ATX, EATX, XLATX, SSICEB, SSIEEB, SSIMEB
 	* [ ] PSUFormFactor - User can create new groups
 		* ATX, TFX, SFX, SFX-L
-	* [ ] FanSize - User can create new groups
+	* [X] FanSize - User can create new groups
 		* 40, 60, 80, 92, 120, 140, 200
 	* [ ] PumpType - User can create new groups
 		* DDC, D5
