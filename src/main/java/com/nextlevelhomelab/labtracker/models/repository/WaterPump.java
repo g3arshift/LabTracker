@@ -10,21 +10,23 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
-public class Hdd extends Storage{
+public class WaterPump extends CustomWaterLoop{
 
     @MapsId
-    @OneToOne(fetch = FetchType.EAGER, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "id", nullable = false)
-    private Storage storage;
+    private CustomWaterLoop customWaterLoop;
 
-    @Column(name = "workload_limit_rating")
-    private Integer workloadLimitRating;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @OnDelete(action = OnDeleteAction.SET_NULL)
+    @JoinColumn(name = "type")
+    private WaterPumpType type;
+
+    @Column(name = "power_type")
+    private WaterPumpPowerType powerType;
 
     @Comment("Measured in RPM")
     @Column(name = "speed")
     private Integer speed;
-
-    @Column(name = "cache")
-    private Float cache;
 }

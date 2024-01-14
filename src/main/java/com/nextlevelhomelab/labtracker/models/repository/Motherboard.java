@@ -7,12 +7,11 @@ import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-public class Storage extends InventoryItem{
+public class Motherboard extends InventoryItem{
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
@@ -20,9 +19,20 @@ public class Storage extends InventoryItem{
     @JoinColumn(name = "id", nullable = false)
     private InventoryItem inventoryItem;
 
-    @Column(name = "capacity")
-    private Integer capacity;
+    @Column(name = "cpu_brand")
+    private CpuBrand cpuBrand;
 
-    @Column(name = "connector")
-    private StorageInterfaceType storageInterfaceType;
+    @Column(name = "chipset", length = 30)
+    private String chipset;
+
+    @Column(name = "socket", length = 10)
+    private String socket;
+
+    @Column(name = "socketCount")
+    private Integer socketCount;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @OnDelete(action = OnDeleteAction.SET_NULL)
+    @JoinColumn(name = "form_factor")
+    private MotherboardFormFactor motherboardFormFactor;
 }

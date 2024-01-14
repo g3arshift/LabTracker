@@ -1,4 +1,4 @@
-package com.nextlevelhomelab.labtracker.models.repository;
+package com.nextlevelhomelab.labtracker.models.utility;
 
 public enum ResultType {
     SUCCESS,

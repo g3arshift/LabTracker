@@ -4,9 +4,7 @@ import com.nextlevelhomelab.labtracker.config.LabTrackerProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.Comment;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
+import org.hibernate.annotations.*;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -105,8 +103,10 @@ public class InventoryItem {
     @Column(name = "user_item", nullable = false)
     private Boolean userItem = false;
 
-    @Column(name = "status", nullable = false, length = 20)
-    private String status;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JoinColumn(name = "status", nullable = false)
+    private InventoryItemStatus status;
 
     @Column(name = "deleted", nullable = false)
     private Boolean deleted = false;

@@ -8,6 +8,11 @@ import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -15,12 +20,12 @@ import org.hibernate.annotations.OnDeleteAction;
 public class Fan extends InventoryItem{
 
     @MapsId
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @OneToOne(fetch = FetchType.EAGER, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "id", nullable = false)
     private InventoryItem inventoryItem;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @OnDelete(action = OnDeleteAction.SET_NULL)
     @JoinColumn(name = "size")
     private FanSize size;
@@ -48,4 +53,13 @@ public class Fan extends InventoryItem{
 
     @Column(name = "brand", length = 100)
     private String brand;
+
+    @ManyToMany(mappedBy = "fans")
+    private Set<AirCooler> airCoolers = new LinkedHashSet<>();
+
+    @ManyToMany(mappedBy = "fans")
+    private Set<WaterCooler> waterCoolers = new LinkedHashSet<>();
+
+    @ManyToMany(mappedBy = "fans")
+    private Set<Radiator> radiators = new LinkedHashSet<>();
 }

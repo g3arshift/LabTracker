@@ -8,11 +8,13 @@ import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.util.Set;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-public class SystemCase extends InventoryItem{
+public class Tubing extends InventoryItem{
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
@@ -20,21 +22,14 @@ public class SystemCase extends InventoryItem{
     @JoinColumn(name = "id", nullable = false)
     private InventoryItem inventoryItem;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @OnDelete(action = OnDeleteAction.SET_NULL)
-    @JoinColumn(name = "style")
-    private CaseStyle caseStyle;
+    @Comment("Represented in InnerDiameter / OuterDiameter")
+    @Column(name = "size", length = 30)
+    private String size;
 
-    @Comment("Measured in rack units")
-    @Column(name = "size")
-    private Integer size;
+    @Column(name = "material", length = 30)
+    private String material;
 
-    @Column(name = "num_three_half_slots")
-    private Integer numThreeHalfSlots;
-
-    @Column(name = "num_two_half_slots")
-    private Integer numTwoHalfSlots;
-
-    @Column(name = "rackmount")
-    private Boolean isRackmount;
+    @ManyToMany
+    @JoinTable(name = "tubing_customwaterloop", joinColumns = {@JoinColumn(name = "tubing_id")}, inverseJoinColumns = {@JoinColumn(name = "customwaterloop_id")})
+    private Set<CustomWaterLoop> customWaterLoops;
 }

@@ -10,18 +10,19 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
-public class Ssd extends Storage{
+public class WaterFitting extends CustomWaterLoop{
 
     @MapsId
-    @OneToOne(fetch = FetchType.EAGER, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "id", nullable = false)
-    private Storage storage;
+    private CustomWaterLoop customWaterLoop;
 
-    @Comment("Measured in gigabytes")
-    @Column(name = "endurance")
-    private Integer endurance;
+    @Comment("Represented in InnerDiameter / OuterDiameter")
+    @Column(name = "size", length = 30)
+    private String size;
 
-    @Column(name = "drive_writes_per_day")
-    private Integer driveWritesPerDay;
+    @Column(name = "brand")
+    private String brand;
+
 }

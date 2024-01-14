@@ -15,7 +15,7 @@ import org.hibernate.annotations.OnDeleteAction;
 public class Ram extends InventoryItem {
 
     @MapsId
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @OneToOne(fetch = FetchType.EAGER, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "id", nullable = false)
     private InventoryItem inventoryItem;

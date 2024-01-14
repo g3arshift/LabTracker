@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -12,7 +11,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Setter
 @NoArgsConstructor
 @Entity
-public class SystemCase extends InventoryItem{
+public class Psu extends InventoryItem{
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
@@ -20,21 +19,14 @@ public class SystemCase extends InventoryItem{
     @JoinColumn(name = "id", nullable = false)
     private InventoryItem inventoryItem;
 
+    @Column(name = "wattage")
+    private Integer wattage;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @OnDelete(action = OnDeleteAction.SET_NULL)
-    @JoinColumn(name = "style")
-    private CaseStyle caseStyle;
+    @JoinColumn(name = "form_factor")
+    private PsuFormFactor formFactor;
 
-    @Comment("Measured in rack units")
-    @Column(name = "size")
-    private Integer size;
-
-    @Column(name = "num_three_half_slots")
-    private Integer numThreeHalfSlots;
-
-    @Column(name = "num_two_half_slots")
-    private Integer numTwoHalfSlots;
-
-    @Column(name = "rackmount")
-    private Boolean isRackmount;
+    @Column(name = "efficiency")
+    private PsuEfficiencyType efficiency;
 }

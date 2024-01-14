@@ -241,6 +241,8 @@
 		* [ ] delete
 		* [ ] update
 		* [ ] findAll
+			* try to use @SQLRestriction("deleted <> FALSE")
+		* [ ] findDeleted
 		* [ ] updateBaseImage
 		* [ ] addImageToGallery (gallery final name extensions are _currentTimestamp)
 	* [ ] UserService
@@ -321,7 +323,7 @@
 				* ThreadCount
 				* ECoreCountPhysical
 				* Cache
-			* [ ] Motherboard
+			* [X] Motherboard
 				* CPUBrand
 				* Chipset
 				* SocketCount
@@ -335,7 +337,7 @@
 				* buffered
 				* ecc
 				* numsticks
-			* [ ] PSU
+			* [X] PSU
 				* Wattage
 				* FormFactor
 				* Efficiency
@@ -364,31 +366,53 @@
 				* Static Pressure (measured in mm h20)
 				* connector type (PWM, DC, ETC)
 				* voltage
-			* [ ] Cooler
+			* [X] Cooler
 				* CoolerType
 				* Brand (custom if set to CustomLoop)
-			* [ ] Watercooling Components
-				* [ ] Pumps
-					* PumpType
-					* PowerType
-					* Speed
-				* [ ] Fittings
-					* Size
-					* Brand
-				* [ ] Tubing
-					* Size
-					* Length
-				* [ ] Radiator
-					* NumFans
-					* Brand
-					* FanSize
-					* FinDensity (fins per inch)
-					* Thickness (measured in mm)
-					* Material (copper, aluminum, etc)
-				* [ ] Waterblocks
-					* Socket
-					* Coldplate Material
-					* Block Material
+			* [X] Watercooling Components
+				* [X] AirCooler
+					* fans
+					* numTowers
+					* socketCompatibility
+					* brand
+				* [X] WaterCooler
+					* fans
+					* finDensity
+					* thickness
+					* socketCompatibiltiy
+					* brand
+				* [ ] CustomWaterLoop
+					* [X] Pumps
+						* PumpType
+						* PowerType
+						* Speed
+					* [X] Fittings
+						* Size
+						* Brand
+					* [X] Tubing
+						* Size
+						* Material
+					* [X] Radiator
+						* fans
+						* Brand
+						* FanSize
+						* FinDensity (fins per inch)
+						* Thickness (measured in mm)
+						* Material (copper, aluminum, etc)
+					* [X] Waterblocks
+						* Socket
+						* Coldplate Material
+						* Block Material
+					* [X] DistributionPlate
+						* Material
+						* mountsPump
+						* numFittingHoles
+					* [X] Resevoir
+						* Material
+						* numFittingHoles
+						* waterCapacity
+						* length
+						* brand
 			* [ ] PCIe Cards
 				* PcieSlotType
 				* NumCaseSlotsOccupied
@@ -407,18 +431,18 @@
 						* VRAM
 						* Length
 						* height
-		* [ ] Rack
+		* [X] Rack
 			* RackSize (in rack units)
 			* PostStyle
-	* [ ] Result
+	* [X] Result
 		* messages (List<String>)
 		* type (ResultType)
 		* payload (generic)
-		* [ ] isSuccess
-		* [ ] addMessage
-		* [ ] Getters
-		* [ ] Setters
-	* [ ] Error Response
+		* [X] isSuccess
+		* [X] addMessage
+		* [X] Getters
+		* [X] Setters
+	* [X] Error Response
 		* buildResponse
 		
 		
@@ -432,7 +456,7 @@
 			* Admin can load and backup DB, as well as delete and edit objects that don't belong to them
 			* User can't backup or load DB, but can edit and delete objects that belong to them and view ALL objects
 			* View can only view objects, but cannot modify the data in any way.
-	* [ ] InventoryItemStatus - User can create new groups
+	* [X] InventoryItemStatus - User can create new groups
 		* Installed, In Storage, Purchased, Sold, To be purchased, Broken
 	* [X] CaseStyle - User can create new groups
 		* Like Full tower, XL Tower, Mini tower, etc
@@ -446,27 +470,27 @@
 		* AMD, Intel
 	* [X] GPUBrand
 		* AMD, Intel, Nvidia
-	* [ ] MotherboardFormFactor - User can create new groups
+	* [X] MotherboardFormFactor - User can create new groups
 		* MiniITX, MicroATX, ATX, EATX, XLATX, SSICEB, SSIEEB, SSIMEB
-	* [ ] PSUFormFactor - User can create new groups
+	* [X] PSUFormFactor - User can create new groups
 		* ATX, TFX, SFX, SFX-L
 	* [X] FanSize - User can create new groups
 		* 40, 60, 80, 92, 120, 140, 200
-	* [ ] PumpType - User can create new groups
+	* [X] PumpType - User can create new groups
 		* DDC, D5
 	* [X] RackPostType
 		* TwoPost, FourPost
-	* [ ] SystemType - User can create new groups
+	* [X] SystemType - User can create new groups
 		* Server, Desktop
 	* [X] PSUEfficiencyType
 		* Plus, Bronze, Silver, gold, Platinum, Titanium
-	* [ ] CoolerType - User can create new groups
+	* [X] CoolerType - User can create new groups
 		* AirTower, AIO, CustomLoop, Immersion
 	* [X] StorageCardType
 		* HBA, RAID
-	* [ ] NetworkPortType - User can create new groups
+	* [X] NetworkPortType - User can create new groups
 		* Ethernet, Fiber
-	* [ ] NetworkGearType - User can create new groups
+	* [X] NetworkGearType - User can create new groups
 		* Switch, Router, Firewall
 
 
