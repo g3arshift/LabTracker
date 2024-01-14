@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -19,12 +20,13 @@ public class Ram extends InventoryItem {
     @JoinColumn(name = "id", nullable = false)
     private InventoryItem inventoryItem;
 
-    @Column(name = "generation", length = 6)
-    private String generation;
+    @Column(name = "generation")
+    private RamGeneration generation;
 
     @Column(name = "capacity")
     private Integer capacity;
 
+    @Comment("Measured in Mhz")
     @Column(name = "speed")
     private Integer speed;
 
@@ -37,6 +39,7 @@ public class Ram extends InventoryItem {
     @Column(name = "ecc")
     private Boolean ecc;
 
+    @Comment("RAM is done in kits, so this is the number of sticks in this kit")
     @Column(name = "num_sticks")
     private Integer numSticks;
 }

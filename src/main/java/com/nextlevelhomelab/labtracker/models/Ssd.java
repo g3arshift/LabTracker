@@ -3,6 +3,7 @@ package com.nextlevelhomelab.labtracker.models;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -17,6 +18,7 @@ public class Ssd extends Storage{
     @JoinColumn(name = "id", nullable = false)
     private Storage storage;
 
+    @Comment("Measured in gigabytes")
     @Column(name = "endurance")
     private Integer endurance;
 

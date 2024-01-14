@@ -3,6 +3,7 @@ package com.nextlevelhomelab.labtracker.models;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -20,6 +21,7 @@ public class Hdd extends Storage{
     @Column(name = "workload_limit_rating")
     private Integer workloadLimitRating;
 
+    @Comment("Measured in RPM")
     @Column(name = "speed")
     private Integer speed;
 

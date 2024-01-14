@@ -2,10 +2,9 @@ package com.nextlevelhomelab.labtracker.models;
 
 import com.nextlevelhomelab.labtracker.config.LabTrackerProperties;
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -24,7 +23,6 @@ import java.util.stream.Stream;
 
 @Getter
 @Setter
-@EqualsAndHashCode
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public class InventoryItem {
@@ -96,6 +94,7 @@ public class InventoryItem {
     @Column(name = "sell_price", precision = 20, scale = 2)
     private BigDecimal sellPrice;
 
+    @Comment("A link to where an item was purchased, or can be purchased")
     @Column(name = "item_url", length = 2048)
     private String itemUrl;
 

@@ -23,6 +23,6 @@ public class Storage extends InventoryItem{
     @Column(name = "capacity")
     private Integer capacity;
 
-    @Column(name = "connector", length = 15)
+    @Column(name = "connector")
     private StorageInterfaceType storageInterfaceType;
 }

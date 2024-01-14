@@ -20,7 +20,7 @@ public class Cpu extends InventoryItem{
     private InventoryItem inventoryItem;
 
     @Column(name = "brand", length = 25)
-    private String brand;
+    private CpuBrand brand;
 
     @Column(name = "base_clock")
     private Float baseClock;
