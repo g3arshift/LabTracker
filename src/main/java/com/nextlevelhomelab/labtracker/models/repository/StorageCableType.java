@@ -9,8 +9,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class MotherboardFormFactor {
+public class StorageCableType {
 
+    /**
+     * This is the actual type of cable used, such as SAS3 to SFF-8643.
+     */
     @Id
     @Column(name = "name", nullable = false, length = 50)
     private String name;

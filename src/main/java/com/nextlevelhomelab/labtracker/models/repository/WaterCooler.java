@@ -13,7 +13,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-public class WaterCooler extends Cooler{
+public class WaterCooler extends Cooler {
 
     @MapsId
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
@@ -23,7 +23,7 @@ public class WaterCooler extends Cooler{
 
     @ManyToMany
     @JoinTable(name = "watercooler_fan", joinColumns = {@JoinColumn(name = "fan_id")}, inverseJoinColumns = {@JoinColumn(name = "watercooler_id")})
-    private Set<Fan> fans= new LinkedHashSet<>();
+    private Set<Fan> fans = new LinkedHashSet<>();
 
     @Comment("Meaured in fins per inch")
     @Column(name = "fin_density")

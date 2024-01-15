@@ -12,7 +12,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-public class CustomWaterLoop extends Cooler{
+public class CustomWaterLoop extends Cooler {
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)

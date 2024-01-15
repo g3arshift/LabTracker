@@ -10,7 +10,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
-public class WaterFitting extends CustomWaterLoop{
+public class WaterFitting extends CustomWaterLoop {
 
     @MapsId
     @ManyToOne(fetch = FetchType.EAGER, optional = false)

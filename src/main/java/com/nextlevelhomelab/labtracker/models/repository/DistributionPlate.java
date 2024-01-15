@@ -9,7 +9,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
-public class DistributionPlate extends CustomWaterLoop{
+public class DistributionPlate extends CustomWaterLoop {
 
     @MapsId
     @ManyToOne(fetch = FetchType.EAGER, optional = false)

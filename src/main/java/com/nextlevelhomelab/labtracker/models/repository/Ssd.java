@@ -10,7 +10,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
-public class Ssd extends Storage{
+public class Ssd extends Storage {
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)

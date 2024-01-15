@@ -10,21 +10,19 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
-public class Hdd extends Storage {
+public class Container extends VirtualSystem {
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "id", nullable = false)
-    private Storage storage;
+    private VirtualSystem virtualSystem;
 
-    @Column(name = "workload_limit_rating")
-    private Integer workloadLimitRating;
+    @Comment("The port of the host machine that the container communicates on")
+    @Column(name = "host_port")
+    private Integer hostPort;
 
-    @Comment("Measured in RPM")
-    @Column(name = "speed")
-    private Integer speed;
-
-    @Column(name = "cache")
-    private Float cache;
+    @Comment("The port of the container that it internally communicates on")
+    @Column(name = "container_port")
+    private Integer containerPort;
 }

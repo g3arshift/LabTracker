@@ -12,7 +12,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-public class AirCooler extends Cooler{
+public class AirCooler extends Cooler {
 
     @MapsId
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
@@ -22,7 +22,7 @@ public class AirCooler extends Cooler{
 
     @ManyToMany
     @JoinTable(name = "aircooler_fan", joinColumns = {@JoinColumn(name = "fan_id")}, inverseJoinColumns = {@JoinColumn(name = "aircooler_id")})
-    private Set<Fan> fans= new LinkedHashSet<>();
+    private Set<Fan> fans = new LinkedHashSet<>();
 
     @Column(name = "num_towers")
     private Integer numTowers;

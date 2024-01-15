@@ -2,27 +2,26 @@ package com.nextlevelhomelab.labtracker.models.repository;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
-public class Storage extends InventoryItem {
+public class VirtualMachine extends VirtualSystem {
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "id", nullable = false)
-    private InventoryItem inventoryItem;
+    private VirtualSystem virtualSystem;
 
-    @Column(name = "capacity")
-    private Integer capacity;
+    @Comment("Amount of RAM allocated to VM, measured in MB")
+    @Column(name = "ram")
+    private Integer ram;
 
-    @Column(name = "connector")
-    private StorageInterfaceType storageInterfaceType;
+    @Column(name = "core_count")
+    private Integer coreCount;
 }

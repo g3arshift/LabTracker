@@ -13,7 +13,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-public class Radiator extends CustomWaterLoop{
+public class Radiator extends CustomWaterLoop {
 
     @MapsId
     @ManyToOne(fetch = FetchType.EAGER, optional = false)

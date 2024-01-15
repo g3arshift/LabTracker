@@ -42,7 +42,8 @@
 * [ ] Database Backup
 * [ ] Database Restore
 * [ ] DB item undelete
-* [ ] UpdateApplication (contacts the GH repo for an update script, then downloads it and follows it)
+* [ ] UpdateApplication (contacts the GH repo for an update script, then downloads it and follows it, or better yet liquibase)
+* [ ] TODO: Enable cascade deletes on tubing_customwaterloop table and on computer_system_extra_part table
 * [ ] Repositories
 	* [ ] Create InventoryItem Repository
 		* [ ] add
@@ -251,7 +252,7 @@
 * [ ] Models
 	* [X] User
 		* Username
-		* Password
+		* Password (https://www.baeldung.com/spring-security-registration-password-encoding-bcrypt)
 		* first name
 		* last name
 		* Group
@@ -260,7 +261,7 @@
 		* Name
 		* Picture (*THIS WILL BE STORED AS A FILE ON THE USERS SYSTEM)
 		* Gallery (Supports AVIF, JPEG, PNG, and WebP)
-		* location
+		* location (Often used for Rack ID, denoting what system a component is in, or for virtual systems host ID. It's where the item actually is)
 		* BuyPrice
 		* SellPrice
 		* ItemURL (a link to where it was bought or can be purchased)
@@ -272,12 +273,13 @@
 		* [X] Constructor
 		* [X] Getters
 		* [X] Setters
-			* [ ] System
+			* Maybe I don't need a system table? I might just be able to make it based off adding a "SystemID" column to items and making an inventory item For the system. Object, not entity
+			* [X] System
 				* ComputerType
-				* IPAddress
-				* ManagementIPAddress (optional)
+					* isWhitebox
+				* ManagementIPAddress
+				* ipAddress
 				* AdditionalIPAddresses (optional)
-				* Gallery
 				* CPU
 				* CPUCount
 				* Motherboard
@@ -289,32 +291,31 @@
 				* PCIe Cards
 				* ExtraParts (This is the "location" variable in an inventory item)
 				* VirtualSystems
-				* isWhitebox
 				* OS Name
-				* [ ] Networking Gear
+				* [X] Networking Gear
 					* GearType
 					* ManagementIPAddress
 					* additional IP Addresses
 					* Ports
-				* [ ] VirtualSystem
+				* [X] VirtualSystem
 					* Host ID
 					* OS
 					* IP Address
-					* [ ] VM
+					* [X] VM
 						* RAM
 						* core count
-						* Storage ID
-					* [ ] Container
+						* Storage ID (
+					* [X] Container
 						* Host Port
 						* Container Port
-		* [ ] UPS
+		* [X] UPS
 			* WattCapacity
 			* RackUnitSize
 			* Voltage
 			* Num Ports
 			* port type
 			* plug type
-		* [ ] Components
+		* [X] Components
 			* [X] CPU
 				* CPUBrand
 				* BaseClock
@@ -368,8 +369,7 @@
 				* voltage
 			* [X] Cooler
 				* CoolerType
-				* Brand (custom if set to CustomLoop)
-			* [X] Watercooling Components
+				* Brand
 				* [X] AirCooler
 					* fans
 					* numTowers
@@ -381,7 +381,7 @@
 					* thickness
 					* socketCompatibiltiy
 					* brand
-				* [ ] CustomWaterLoop
+				* [X] CustomWaterLoop
 					* [X] Pumps
 						* PumpType
 						* PowerType
@@ -413,18 +413,18 @@
 						* waterCapacity
 						* length
 						* brand
-			* [ ] PCIe Cards
+			* [X] PCIe Cards
 				* PcieSlotType
 				* NumCaseSlotsOccupied
-					* [ ] StorageAdapters
+					* [X] StorageAdapters
 						* NumPorts
-						* InterfaceType
+						* CableType
 						* CardType
-					* [ ] Network Cards
+					* [X] Network Cards
 						* NumPorts
 						* PortSpeed
 						* PortType
-					* [ ] GPU
+					* [X] GPU
 						* GPUBrand
 						* Core speed
 						* Memory speed
@@ -499,6 +499,7 @@
 * Create a random equipment generator for testing
 * Test UserItems with a box of cable and a bag containing 3ft of fiber.
 * [ ] Tests
+	* Test deletion of parent and child and child and parent on both DB and EntityManager
 
 
 

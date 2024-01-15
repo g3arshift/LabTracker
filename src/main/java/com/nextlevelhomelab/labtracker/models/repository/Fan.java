@@ -8,16 +8,14 @@ import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import java.util.ArrayList;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-public class Fan extends InventoryItem{
+public class Fan extends InventoryItem {
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)

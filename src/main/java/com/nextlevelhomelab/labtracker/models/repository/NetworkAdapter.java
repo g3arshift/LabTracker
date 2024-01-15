@@ -10,21 +10,23 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
-public class Hdd extends Storage {
+public class NetworkAdapter extends PcieCard {
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "id", nullable = false)
-    private Storage storage;
+    private PcieCard pcieCard;
 
-    @Column(name = "workload_limit_rating")
-    private Integer workloadLimitRating;
+    @Column(name = "num_ports")
+    private Integer numPorts;
 
-    @Comment("Measured in RPM")
-    @Column(name = "speed")
-    private Integer speed;
+    @Comment("Measured in Mbps")
+    @Column(name = "port_speed")
+    private Integer portSpeed;
 
-    @Column(name = "cache")
-    private Float cache;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @OnDelete(action = OnDeleteAction.SET_NULL)
+    @JoinColumn(name = "port_type")
+    private NetworkPortType portType;
 }

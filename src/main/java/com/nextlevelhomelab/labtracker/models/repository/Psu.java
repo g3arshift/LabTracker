@@ -11,7 +11,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Psu extends InventoryItem{
+public class Psu extends InventoryItem {
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)

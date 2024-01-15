@@ -7,12 +7,11 @@ import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-public class Storage extends InventoryItem {
+public class VirtualSystem extends InventoryItem {
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
@@ -20,9 +19,14 @@ public class Storage extends InventoryItem {
     @JoinColumn(name = "id", nullable = false)
     private InventoryItem inventoryItem;
 
-    @Column(name = "capacity")
-    private Integer capacity;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @OnDelete(action = OnDeleteAction.SET_NULL)
+    @JoinColumn(name = "host_id")
+    private ComputerSystem computerSystem;
 
-    @Column(name = "connector")
-    private StorageInterfaceType storageInterfaceType;
+    @Column(name = "os_name", length = 100)
+    private String osName;
+
+    @Column(name = "ip_address", length = 15)
+    private String ipAddress;
 }

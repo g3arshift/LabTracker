@@ -4,15 +4,17 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-public class SystemCase extends InventoryItem{
+public class NetworkGear extends InventoryItem {
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
@@ -22,19 +24,12 @@ public class SystemCase extends InventoryItem{
 
     @ManyToOne(fetch = FetchType.LAZY)
     @OnDelete(action = OnDeleteAction.SET_NULL)
-    @JoinColumn(name = "style")
-    private CaseStyle caseStyle;
+    @JoinColumn(name = "type")
+    private NetworkGearType type;
 
-    @Comment("Measured in rack units")
-    @Column(name = "size")
-    private Integer size;
+    @Column(name = "management_ip_address", length = 15)
+    private String managementIpAddress;
 
-    @Column(name = "num_three_half_slots")
-    private Integer numThreeHalfSlots;
-
-    @Column(name = "num_two_half_slots")
-    private Integer numTwoHalfSlots;
-
-    @Column(name = "rackmount")
-    private Boolean isRackmount;
+    @OneToMany(mappedBy = "networkGear", orphanRemoval = true)
+    private Set<NetworkGearPort> networkGearPorts = new LinkedHashSet<>();
 }

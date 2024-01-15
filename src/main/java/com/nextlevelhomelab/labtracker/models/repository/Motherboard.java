@@ -11,7 +11,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Motherboard extends InventoryItem{
+public class Motherboard extends InventoryItem {
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
@@ -28,8 +28,14 @@ public class Motherboard extends InventoryItem{
     @Column(name = "socket", length = 10)
     private String socket;
 
-    @Column(name = "socketCount")
+    @Column(name = "socket_count")
     private Integer socketCount;
+
+    @Column(name = "memory_channel_count")
+    private Integer memoryChannelCount;
+
+    @Column(name = "memory_slot_count")
+    private Integer memorySlotCount;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @OnDelete(action = OnDeleteAction.SET_NULL)

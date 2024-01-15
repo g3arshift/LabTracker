@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class SystemType {
+public class ComputerSystemType {
 
     @Id
     @Column(name = "name", nullable = false, length = 50)

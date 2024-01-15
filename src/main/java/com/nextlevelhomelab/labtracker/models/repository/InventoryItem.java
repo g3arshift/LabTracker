@@ -4,7 +4,9 @@ import com.nextlevelhomelab.labtracker.config.LabTrackerProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.*;
+import org.hibernate.annotations.Comment;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -45,8 +47,8 @@ public class InventoryItem {
                     .toList();
 
             //Make sure our files are an accepted image format, and load them into the gallery.
-            for(File f : filesInFolder) {
-                if(labTrackerProperties.getAcceptedImageTypes().contains(Files.probeContentType(f.toPath()))) {
+            for (File f : filesInFolder) {
+                if (labTrackerProperties.getAcceptedImageTypes().contains(Files.probeContentType(f.toPath()))) {
                     gallery.add(ImageIO.read(f));
                 }
             }
@@ -57,6 +59,11 @@ public class InventoryItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @OnDelete(action = OnDeleteAction.SET_NULL)
+    @JoinColumn(name = "system_id")
+    private ComputerSystem computerSystem;
 
     @Transient
     private LabTrackerProperties labTrackerProperties;

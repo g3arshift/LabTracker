@@ -3,7 +3,6 @@ package com.nextlevelhomelab.labtracker.models.utility;
 import lombok.Getter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 public class Result<T> {
