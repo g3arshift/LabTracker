@@ -27,7 +27,7 @@ public class NetworkGearPort {
     @Column(name = "port_number")
     private Integer portNumber;
 
-    @Column(name = "ip_address", length = 15)
+    @Column(name = "ip_address", length = 128)
     private String ipAddress;
 
     @Comment("Denotes if a port is a virtual port or not")

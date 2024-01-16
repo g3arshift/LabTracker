@@ -27,6 +27,6 @@ public class VirtualSystem extends InventoryItem {
     @Column(name = "os_name", length = 100)
     private String osName;
 
-    @Column(name = "ip_address", length = 15)
+    @Column(name = "ip_address", length = 128)
     private String ipAddress;
 }

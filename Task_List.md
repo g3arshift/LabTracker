@@ -249,7 +249,8 @@
 	* [ ] UserService
 * [ ] Controllers
 * [ ] Security
-* [ ] Models
+* [X] Models
+* TODO: use Regex pattern matching for ip validation.
 	* [X] User
 		* Username
 		* Password (https://www.baeldung.com/spring-security-registration-password-encoding-bcrypt)

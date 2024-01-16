@@ -17,6 +17,6 @@ public class ComputerSystemIpAddress {
     @JoinColumn(name = "id", nullable = false)
     private ComputerSystem computerSystem;
 
-    @Column(name = "ip_address", length = 15)
+    @Column(name = "ip_address", length = 128)
     private String ipAddress;
 }

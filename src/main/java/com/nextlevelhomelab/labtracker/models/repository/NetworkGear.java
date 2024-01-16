@@ -27,7 +27,7 @@ public class NetworkGear extends InventoryItem {
     @JoinColumn(name = "type")
     private NetworkGearType type;
 
-    @Column(name = "management_ip_address", length = 15)
+    @Column(name = "management_ip_address", length = 128)
     private String managementIpAddress;
 
     @OneToMany(mappedBy = "networkGear", orphanRemoval = true)
