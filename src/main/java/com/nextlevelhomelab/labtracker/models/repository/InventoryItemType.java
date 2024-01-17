@@ -1,0 +1,32 @@
+package com.nextlevelhomelab.labtracker.models.repository;
+
+public enum InventoryItemType {
+    AIR_COOLER,
+    COMPUTER_SYSTEM,
+    COMPUTER_SYSTEM_CASE,
+    CONTAINER,
+    COOLER,
+    CPU,
+    CUSTOM,
+    DISTRIBUTION_PLATE,
+    FAN,
+    GPU,
+    HDD,
+    MOTHERBOARD,
+    NETWORK_ADAPTER,
+    NETWORK_GEAR,
+    PSU,
+    RACK,
+    RADIATOR,
+    RAM,
+    RESEVOIR,
+    SSD,
+    STORAGE_ADAPTER,
+    TUBING,
+    UPS,
+    VIRTUAL_MACHINE,
+    WATER_BLOCK,
+    WATER_COOLER,
+    WATER_FITTING,
+    WATER_PUMP
+}

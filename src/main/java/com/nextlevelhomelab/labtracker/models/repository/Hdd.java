@@ -7,10 +7,16 @@ import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
+
 @Getter
 @Setter
 @Entity
-public class Hdd extends Storage {
+@Table(name ="hdd")
+        public class Hdd extends Storage {
+
+    public Hdd() throws IOException {
+    }
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)

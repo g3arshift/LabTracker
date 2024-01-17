@@ -6,13 +6,18 @@ import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Getter
 @Setter
 @Entity
+@Table(name = "air_cooler")
 public class AirCooler extends Cooler {
+
+    public AirCooler() throws IOException {
+    }
 
     @MapsId
     @ManyToOne(fetch = FetchType.EAGER, optional = false)

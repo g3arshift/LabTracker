@@ -7,10 +7,16 @@ import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
+
 @Getter
 @Setter
 @Entity
+@Table(name = "virtual_machine")
 public class VirtualMachine extends VirtualSystem {
+
+    public VirtualMachine() throws IOException {
+    }
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)

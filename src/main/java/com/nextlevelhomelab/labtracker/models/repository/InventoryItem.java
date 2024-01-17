@@ -1,12 +1,11 @@
 package com.nextlevelhomelab.labtracker.models.repository;
 
 import com.nextlevelhomelab.labtracker.config.LabTrackerProperties;
+import jakarta.persistence.Table;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.Comment;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
+import org.hibernate.annotations.*;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -24,6 +23,8 @@ import java.util.stream.Stream;
 @Getter
 @Setter
 @Entity
+@Table(name = "inventory_item")
+@SoftDelete(strategy = SoftDeleteType.DELETED, columnName = "deleted")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class InventoryItem {
 
@@ -48,7 +49,7 @@ public class InventoryItem {
 
             //Make sure our files are an accepted image format, and load them into the gallery.
             for (File f : filesInFolder) {
-                if (labTrackerProperties.getAcceptedImageTypes().contains(Files.probeContentType(f.toPath()))) {
+                if (labTrackerProperties.getACCEPTED_IMAGE_TYPES().contains(Files.probeContentType(f.toPath()))) {
                     gallery.add(ImageIO.read(f));
                 }
             }
@@ -64,6 +65,9 @@ public class InventoryItem {
     @OnDelete(action = OnDeleteAction.SET_NULL)
     @JoinColumn(name = "system_id")
     private ComputerSystem computerSystem;
+
+    @Column(name = "type")
+    private InventoryItemType type;
 
     @Transient
     private LabTrackerProperties labTrackerProperties;
@@ -115,9 +119,6 @@ public class InventoryItem {
     @JoinColumn(name = "status", nullable = false)
     private InventoryItemStatus status;
 
-    @Column(name = "deleted", nullable = false)
-    private Boolean deleted = false;
-
     @Column(name = "last_updated", nullable = false)
     private LocalDateTime lastUpdated;
 
@@ -125,6 +126,9 @@ public class InventoryItem {
     @OnDelete(action = OnDeleteAction.RESTRICT)
     @JoinColumn(name = "last_updated_by", nullable = false)
     private User lastUpdatedBy;
+
+    @Column(name = "deleted")
+    private Boolean deleted;
 
     /**
      * The required permission level to EDIT this object.

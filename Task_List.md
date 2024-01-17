@@ -20,6 +20,7 @@
 * Use Hibernate
 * App demo on website
 * Installer and uninstaller
+* TODO: command line arguments to automatically export DB backup
 
 ## Tasks
 
@@ -27,7 +28,7 @@
 
 * [ ] Create database schema diagram
 	* [ ] Create a database schema
-	* [ ] Only do soft deletes. When a user deletes an item, mark it for deletion, which will then be properly deleted in 30 days. Perform this action when the application is booted.
+	* [ ] Only do soft deletes. When a user deletes an item, mark it for deletion, which will then be properly deleted in 30 days. Perform this action when the application is booted, and after it's been running for X amount of time.
 	* Mark what user made the change to an item, and when
 	* Mark which user created an item, and when
 	* [ ] Populate a test database with test data

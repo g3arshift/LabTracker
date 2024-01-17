@@ -7,13 +7,18 @@ import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Getter
 @Setter
 @Entity
+@Table(name = "water_cooler")
 public class WaterCooler extends Cooler {
+
+    public WaterCooler() throws IOException {
+    }
 
     @MapsId
     @ManyToOne(fetch = FetchType.EAGER, optional = false)

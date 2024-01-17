@@ -2,17 +2,21 @@ package com.nextlevelhomelab.labtracker.models.repository;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
+
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
+@Table(name = "rack")
 public class Rack extends InventoryItem {
+
+    public Rack() throws IOException {
+    }
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)

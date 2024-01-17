@@ -6,10 +6,16 @@ import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
+
 @Getter
 @Setter
 @Entity
+@Table(name = "storage_adapter")
 public class StorageAdapter extends PcieCard {
+
+    public StorageAdapter() throws IOException {
+    }
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)

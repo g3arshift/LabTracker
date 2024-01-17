@@ -7,13 +7,18 @@ import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Getter
 @Setter
 @Entity
+@Table(name = "radiator")
 public class Radiator extends CustomWaterLoop {
+
+    public Radiator() throws IOException {
+    }
 
     @MapsId
     @ManyToOne(fetch = FetchType.EAGER, optional = false)

@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
-@Setter
 @Component
 @ConfigurationProperties("labtracker.properties")
 public class LabTrackerProperties {
@@ -25,19 +24,23 @@ public class LabTrackerProperties {
             throw new RuntimeException(e);
         }
 
-        acceptedImageTypes = new ArrayList<>();
+        ACCEPTED_IMAGE_TYPES = new ArrayList<>();
 
-        acceptedImageTypes.add("image/avif");
-        acceptedImageTypes.add("image/jpeg");
-        acceptedImageTypes.add("image/png");
-        acceptedImageTypes.add("image/webp");
+        ACCEPTED_IMAGE_TYPES.add("image/avif");
+        ACCEPTED_IMAGE_TYPES.add("image/jpeg");
+        ACCEPTED_IMAGE_TYPES.add("image/png");
+        ACCEPTED_IMAGE_TYPES.add("image/webp");
     }
 
+    @Setter
     private String databaseDirectory = "./data";
 
+    @Setter
     private String imageDirectory = "./images";
 
+    @Setter
     private BufferedImage defaultImage;
 
-    private List<String> acceptedImageTypes;
+    private final List<String> ACCEPTED_IMAGE_TYPES;
+
 }

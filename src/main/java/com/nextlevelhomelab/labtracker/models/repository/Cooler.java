@@ -2,16 +2,20 @@ package com.nextlevelhomelab.labtracker.models.repository;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
+
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
+@Table(name = "cooler")
 public class Cooler extends InventoryItem {
+
+    public Cooler() throws IOException {
+    }
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
@@ -21,8 +25,8 @@ public class Cooler extends InventoryItem {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @OnDelete(action = OnDeleteAction.SET_NULL)
-    @JoinColumn(name = "type")
-    private CoolerType type;
+    @JoinColumn(name = "cooler_type")
+    private CoolerType coolerType;
 
     @Column(name = "brand", length = 100)
     private String brand;

@@ -7,10 +7,16 @@ import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
+
 @Getter
 @Setter
 @Entity
+@Table(name = "water_pump")
 public class WaterPump extends CustomWaterLoop {
+
+    public WaterPump() throws IOException {
+    }
 
     @MapsId
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
@@ -20,8 +26,8 @@ public class WaterPump extends CustomWaterLoop {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @OnDelete(action = OnDeleteAction.SET_NULL)
-    @JoinColumn(name = "type")
-    private WaterPumpType type;
+    @JoinColumn(name = "water_pump_type")
+    private WaterPumpType waterPumpType;
 
     @Column(name = "power_type")
     private WaterPumpPowerType powerType;

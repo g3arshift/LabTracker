@@ -6,13 +6,18 @@ import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Getter
 @Setter
 @Entity
+@Table(name = "custom_water_loop")
 public class CustomWaterLoop extends Cooler {
+
+    public CustomWaterLoop() throws IOException {
+    }
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
@@ -39,6 +44,5 @@ public class CustomWaterLoop extends Cooler {
     private Set<DistributionPlate> distributionPlates = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "customWaterLoop", orphanRemoval = true)
-    private Set<Resevoir> resevoirs = new LinkedHashSet<>();
-
+    private Set<Reservoir> reservoirs = new LinkedHashSet<>();
 }

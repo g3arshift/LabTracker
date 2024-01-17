@@ -2,17 +2,21 @@ package com.nextlevelhomelab.labtracker.models.repository;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
+
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
+@Table(name = "ram")
 public class Ram extends InventoryItem {
+
+    public Ram() throws IOException {
+    }
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
@@ -30,8 +34,8 @@ public class Ram extends InventoryItem {
     @Column(name = "speed")
     private Integer speed;
 
-    @Column(name = "type", length = 10)
-    private String type;
+    @Column(name = "ram_type", length = 10)
+    private RamType ramType;
 
     @Column(name = "buffered")
     private Boolean buffered;

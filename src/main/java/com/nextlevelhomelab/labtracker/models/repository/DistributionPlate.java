@@ -6,10 +6,16 @@ import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
+
 @Getter
 @Setter
 @Entity
+@Table(name = "distribution_plate")
 public class DistributionPlate extends CustomWaterLoop {
+
+    public DistributionPlate() throws IOException {
+    }
 
     @MapsId
     @ManyToOne(fetch = FetchType.EAGER, optional = false)

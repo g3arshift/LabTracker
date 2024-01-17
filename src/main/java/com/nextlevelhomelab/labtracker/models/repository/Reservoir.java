@@ -7,17 +7,22 @@ import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
+
 @Getter
 @Setter
 @Entity
-public class Resevoir extends CustomWaterLoop {
+@Table(name = "reservoir")
+public class Reservoir extends CustomWaterLoop {
+
+    public Reservoir() throws IOException {
+    }
 
     @MapsId
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "id", nullable = false)
     private CustomWaterLoop customWaterLoop;
-
 
     @Column(name = "material", length = 100)
     private String material;

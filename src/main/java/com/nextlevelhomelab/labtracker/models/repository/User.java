@@ -3,12 +3,14 @@ package com.nextlevelhomelab.labtracker.models.repository;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
+@Table(name = "user")
 public class User {
 
     @Id
@@ -23,7 +25,4 @@ public class User {
 
     @Column(name = "last_name", length = 100)
     private String lastName;
-
-    @Column(name = "group", nullable = false)
-    private String group;
 }

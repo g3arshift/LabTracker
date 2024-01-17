@@ -10,6 +10,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
+@Table(name = "network_gear_port")
 public class NetworkGearPort {
 
     @Id

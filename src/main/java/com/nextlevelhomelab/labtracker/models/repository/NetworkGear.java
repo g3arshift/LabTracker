@@ -2,19 +2,22 @@ package com.nextlevelhomelab.labtracker.models.repository;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
+@Table(name = "network_gear")
 public class NetworkGear extends InventoryItem {
+
+    public NetworkGear() throws IOException {
+    }
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
@@ -24,8 +27,8 @@ public class NetworkGear extends InventoryItem {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @OnDelete(action = OnDeleteAction.SET_NULL)
-    @JoinColumn(name = "type")
-    private NetworkGearType type;
+    @JoinColumn(name = "network_gear_type")
+    private NetworkGearType networkGearType;
 
     @Column(name = "management_ip_address", length = 128)
     private String managementIpAddress;

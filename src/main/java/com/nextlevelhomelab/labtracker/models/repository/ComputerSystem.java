@@ -2,19 +2,22 @@ package com.nextlevelhomelab.labtracker.models.repository;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
+@Table(name = "computer_system")
 public class ComputerSystem extends InventoryItem {
+
+    public ComputerSystem() throws IOException {
+    }
 
     @MapsId
     @OneToOne(fetch = FetchType.EAGER, optional = false)
@@ -24,8 +27,8 @@ public class ComputerSystem extends InventoryItem {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @OnDelete(action = OnDeleteAction.SET_NULL)
-    @JoinColumn(name = "type")
-    private ComputerSystemType type;
+    @JoinColumn(name = "computer_system_type")
+    private ComputerSystemType computerSystemType;
 
     @OneToMany(mappedBy = "computerSystem", orphanRemoval = true)
     private Set<InventoryItem> computerSystemComponents = new LinkedHashSet<>();

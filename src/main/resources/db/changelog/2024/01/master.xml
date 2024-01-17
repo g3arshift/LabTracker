@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1705475646848-1" author="Gear Shift (generated)">
+        <createTable tableName="air_cooler">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_aircooler"/>
+            </column>
+            <column name="num_towers" type="INT"/>
+            <column name="socket_compatibility" type="VARCHAR(10)"/>
+            <column name="brand" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-2" author="Gear Shift (generated)">
+        <createTable tableName="aircooler_fan">
+            <column name="aircooler_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_aircooler_fan"/>
+            </column>
+            <column name="fan_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_aircooler_fan"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-3" author="Gear Shift (generated)">
+        <createTable tableName="case_style">
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_casestyle"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-4" author="Gear Shift (generated)">
+        <createTable tableName="computer_system">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_computersystem"/>
+            </column>
+            <column name="computer_system_type" type="VARCHAR(50)"/>
+            <column name="whitebox" type="BOOLEAN"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-5" author="Gear Shift (generated)">
+        <createTable tableName="computer_system_case">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_computersystemcase"/>
+            </column>
+            <column name="style" type="VARCHAR(50)"/>
+            <column name="size" remarks="Measured in rack units" type="INT"/>
+            <column name="num_three_half_slots" type="INT"/>
+            <column name="num_two_half_slots" type="INT"/>
+            <column name="rackmount" type="BOOLEAN"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-6" author="Gear Shift (generated)">
+        <createTable tableName="computer_system_extra_part">
+            <column name="inventory_item_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_computer_system_extra_part"/>
+            </column>
+            <column name="system_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_computer_system_extra_part"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-7" author="Gear Shift (generated)">
+        <createTable tableName="computer_system_ip_address">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_computersystemipaddress"/>
+            </column>
+            <column name="ip_address" type="VARCHAR(128)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-8" author="Gear Shift (generated)">
+        <createTable tableName="computer_system_type">
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_computersystemtype"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-9" author="Gear Shift (generated)">
+        <createTable tableName="container">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_container"/>
+            </column>
+            <column name="host_port" remarks="The port of the host machine that the container communicates on"
+                    type="INT"/>
+            <column name="container_port" remarks="The port of the container that it internally communicates on"
+                    type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-10" author="Gear Shift (generated)">
+        <createTable tableName="cooler">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_cooler"/>
+            </column>
+            <column name="cooler_type" type="VARCHAR(50)"/>
+            <column name="brand" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-11" author="Gear Shift (generated)">
+        <createTable tableName="cooler_type">
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_coolertype"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-12" author="Gear Shift (generated)">
+        <createTable tableName="cpu">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_cpu"/>
+            </column>
+            <column name="brand" type="SMALLINT"/>
+            <column name="base_clock" type="FLOAT"/>
+            <column name="boost_clock" type="FLOAT"/>
+            <column name="core_count" type="INT"/>
+            <column name="thread_count" type="INT"/>
+            <column name="e_core_count" type="INT"/>
+            <column name="cache" type="FLOAT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-13" author="Gear Shift (generated)">
+        <createTable tableName="custom_water_loop">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_customwaterloop"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-14" author="Gear Shift (generated)">
+        <createTable tableName="distribution_plate">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_distributionplate"/>
+            </column>
+            <column name="material" type="VARCHAR(100)"/>
+            <column name="mounts_pump" type="BOOLEAN"/>
+            <column name="num_fitting_holes" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-15" author="Gear Shift (generated)">
+        <createTable tableName="fan">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_fan"/>
+            </column>
+            <column name="size" type="INT"/>
+            <column name="thickness" type="INT"/>
+            <column name="speed" remarks="Measured in RPM" type="INT"/>
+            <column name="airflow" remarks="Measured in CFM" type="FLOAT"/>
+            <column name="static_pressure" remarks="Measured in mm/h20" type="FLOAT"/>
+            <column name="connector_type" type="SMALLINT"/>
+            <column name="voltage" type="INT"/>
+            <column name="brand" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-16" author="Gear Shift (generated)">
+        <createTable tableName="fan_size">
+            <column name="size" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_fansize"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-17" author="Gear Shift (generated)">
+        <createTable tableName="gpu">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_gpu"/>
+            </column>
+            <column name="brand" type="VARCHAR(25)"/>
+            <column name="core_speed" remarks="Measured in Mhz" type="INT"/>
+            <column name="memory_speed" remarks="Measured in Mhz" type="INT"/>
+            <column name="vram" remarks="Measured in gigabytes" type="INT"/>
+            <column name="length" remarks="Measured in mm" type="INT"/>
+            <column name="height" remarks="Measured in mm" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-18" author="Gear Shift (generated)">
+        <createTable tableName="hdd">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_hdd"/>
+            </column>
+            <column name="workload_limit_rating" type="INT"/>
+            <column name="speed" remarks="Measured in RPM" type="INT"/>
+            <column name="cache" type="FLOAT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-19" author="Gear Shift (generated)">
+        <createTable tableName="inventory_item">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_inventoryitem"/>
+            </column>
+            <column name="system_id" type="BIGINT"/>
+            <column name="type" type="SMALLINT"/>
+            <column name="location_id" type="BIGINT"/>
+            <column name="name" type="VARCHAR(100)"/>
+            <column name="owner" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buy_price" type="DECIMAL(20, 2)"/>
+            <column name="sell_price" type="DECIMAL(20, 2)"/>
+            <column name="item_url" remarks="A link to where an item was purchased, or can be purchased"
+                    type="VARCHAR(2048)"/>
+            <column name="notes" type="CHARACTER LARGE OBJECT"/>
+            <column name="user_item" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_updated" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_updated_by" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="deleted" type="BOOLEAN"/>
+            <column name="permission_level_required" type="SMALLINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-20" author="Gear Shift (generated)">
+        <createTable tableName="inventory_item_status">
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_inventoryitemstatus"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-21" author="Gear Shift (generated)">
+        <createTable tableName="motherboard">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_motherboard"/>
+            </column>
+            <column name="cpu_brand" type="SMALLINT"/>
+            <column name="chipset" type="VARCHAR(30)"/>
+            <column name="socket" type="VARCHAR(10)"/>
+            <column name="socket_count" type="INT"/>
+            <column name="memory_channel_count" type="INT"/>
+            <column name="memory_slot_count" type="INT"/>
+            <column name="form_factor" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-22" author="Gear Shift (generated)">
+        <createTable tableName="motherboard_form_factor">
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_motherboardformfactor"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-23" author="Gear Shift (generated)">
+        <createTable tableName="network_adapter">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_networkadapter"/>
+            </column>
+            <column name="num_ports" type="INT"/>
+            <column name="port_speed" remarks="Measured in Mbps" type="INT"/>
+            <column name="port_type" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-24" author="Gear Shift (generated)">
+        <createTable tableName="network_gear">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_networkgear"/>
+            </column>
+            <column name="network_gear_type" type="VARCHAR(50)"/>
+            <column name="management_ip_address" type="VARCHAR(128)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-25" author="Gear Shift (generated)">
+        <createTable tableName="network_gear_port">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_networkgearport"/>
+            </column>
+            <column name="port_type" type="VARCHAR(50)"/>
+            <column name="port_number" remarks="The physical number of the port on the device" type="INT"/>
+            <column name="ip_address" type="VARCHAR(128)"/>
+            <column name="virtual" remarks="Denotes if a port is a virtual port or not" type="BOOLEAN"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-26" author="Gear Shift (generated)">
+        <createTable tableName="network_gear_type">
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_networkgeartype"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-27" author="Gear Shift (generated)">
+        <createTable tableName="network_port_type">
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_networkporttype"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-28" author="Gear Shift (generated)">
+        <createTable tableName="pcie_card">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_pciecard"/>
+            </column>
+            <column name="pcie_slot_size"
+                    remarks="Measured in the number of lanes it uses electrically. So an x8 card would appear here as 8."
+                    type="SMALLINT"/>
+            <column name="num_case_slots" remarks="The number of case slots the card occupies " type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-29" author="Gear Shift (generated)">
+        <createTable tableName="psu">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_psu"/>
+            </column>
+            <column name="wattage" type="INT"/>
+            <column name="form_factor" type="VARCHAR(50)"/>
+            <column name="efficiency" type="SMALLINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-30" author="Gear Shift (generated)">
+        <createTable tableName="psu_form_factor">
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_psuformfactor"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-31" author="Gear Shift (generated)">
+        <createTable tableName="rack">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_rack"/>
+            </column>
+            <column name="size" remarks="Measured in rack units" type="INT"/>
+            <column name="num_posts" type="SMALLINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-32" author="Gear Shift (generated)">
+        <createTable tableName="radiator">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_radiator"/>
+            </column>
+            <column name="fin_density" remarks="Meaured in fins per inch" type="FLOAT"/>
+            <column name="thickness" remarks="Thickness of the radiator itself, measured in mm" type="FLOAT"/>
+            <column name="material" type="VARCHAR(100)"/>
+            <column name="brand" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-33" author="Gear Shift (generated)">
+        <createTable tableName="radiator_fan">
+            <column name="fan_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_radiator_fan"/>
+            </column>
+            <column name="radiator_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_radiator_fan"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-34" author="Gear Shift (generated)">
+        <createTable tableName="ram">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_ram"/>
+            </column>
+            <column name="generation" type="SMALLINT"/>
+            <column name="capacity" type="INT"/>
+            <column name="speed" remarks="Measured in Mhz" type="INT"/>
+            <column name="ram_type" type="SMALLINT"/>
+            <column name="buffered" type="BOOLEAN"/>
+            <column name="ecc" type="BOOLEAN"/>
+            <column name="num_sticks" remarks="RAM is done in kits, so this is the number of sticks in this kit"
+                    type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-35" author="Gear Shift (generated)">
+        <createTable tableName="resevoir">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_resevoir"/>
+            </column>
+            <column name="material" type="VARCHAR(100)"/>
+            <column name="num_fitting_holes" type="INT"/>
+            <column name="water_capacity" remarks="Measured in mL" type="INT"/>
+            <column name="length" type="FLOAT"/>
+            <column name="brand" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-36" author="Gear Shift (generated)">
+        <createTable tableName="ssd">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_ssd"/>
+            </column>
+            <column name="endurance" remarks="Measured in gigabytes" type="INT"/>
+            <column name="drive_writes_per_day" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-37" author="Gear Shift (generated)">
+        <createTable tableName="storage">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_storage"/>
+            </column>
+            <column name="capacity" type="INT"/>
+            <column name="connector" type="SMALLINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-38" author="Gear Shift (generated)">
+        <createTable tableName="storage_adapter">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_storageadapter"/>
+            </column>
+            <column name="num_ports" type="INT"/>
+            <column name="cable_type" type="VARCHAR(50)"/>
+            <column name="card_type" type="SMALLINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-39" author="Gear Shift (generated)">
+        <createTable tableName="storage_cable_type">
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_storagecabletype"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-40" author="Gear Shift (generated)">
+        <createTable tableName="tubing">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tubing"/>
+            </column>
+            <column name="size" remarks="Represented in InnerDiameter / OuterDiameter" type="VARCHAR(30)"/>
+            <column name="material" type="VARCHAR(30)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-41" author="Gear Shift (generated)">
+        <createTable tableName="tubing_customwaterloop">
+            <column name="customwaterloop_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tubing_customwaterloop"/>
+            </column>
+            <column name="tubing_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tubing_customwaterloop"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-42" author="Gear Shift (generated)">
+        <createTable tableName="ups">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_ups"/>
+            </column>
+            <column name="watt_capacity" type="INT"/>
+            <column name="voltage" type="INT"/>
+            <column defaultValue="5-15P" name="plug_type"
+                    remarks="The NEMA configuration name for the plug coming from the unit"
+                    type="character varying(10)"/>
+            <column defaultValue="5-15R" name="port_type"
+                    remarks="The NEMA configuration name for the ports on the rear of the unit"
+                    type="character varying(10)"/>
+            <column name="num_ports" remarks="The number of available ports on the rear of the UPS you can plug into"
+                    type="INT"/>
+            <column name="size" remarks="Measured in rack units" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-43" author="Gear Shift (generated)">
+        <createTable tableName="user">
+            <column name="username" type="VARCHAR(100)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_user"/>
+            </column>
+            <column name="password" type="VARCHAR(60)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="first_name" type="VARCHAR(100)"/>
+            <column name="last_name" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-44" author="Gear Shift (generated)">
+        <createTable tableName="virtual_machine">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_virtualmachine"/>
+            </column>
+            <column name="ram" remarks="Amount of RAM allocated to VM, measured in MB" type="INT"/>
+            <column name="core_count" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-45" author="Gear Shift (generated)">
+        <createTable tableName="virtual_system">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_virtualsystem"/>
+            </column>
+            <column name="host_id" type="BIGINT"/>
+            <column name="os_name" type="VARCHAR(100)"/>
+            <column name="ip_address" type="VARCHAR(128)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-46" author="Gear Shift (generated)">
+        <createTable tableName="water_block">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_waterblock"/>
+            </column>
+            <column name="socket" type="VARCHAR(10)"/>
+            <column name="coldplate_material" remarks="The material of the parts of the block that DO contact the water"
+                    type="VARCHAR(25)"/>
+            <column name="block_material" remarks="The material of the parts of the block that DON'T contact the water"
+                    type="VARCHAR(25)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-47" author="Gear Shift (generated)">
+        <createTable tableName="water_cooler">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_watercooler"/>
+            </column>
+            <column name="fin_density" remarks="Meaured in fins per inch" type="FLOAT"/>
+            <column name="thickness" remarks="Thickness of the radiator itself, measured in mm" type="FLOAT"/>
+            <column name="socket_compatibility" type="VARCHAR(10)"/>
+            <column name="brand" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-48" author="Gear Shift (generated)">
+        <createTable tableName="water_fitting">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_waterfitting"/>
+            </column>
+            <column name="size" remarks="Represented in InnerDiameter / OuterDiameter" type="VARCHAR(30)"/>
+            <column name="brand" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-49" author="Gear Shift (generated)">
+        <createTable tableName="water_pump">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_waterpump"/>
+            </column>
+            <column name="water_pump_type" type="VARCHAR(50)"/>
+            <column name="power_type" type="SMALLINT"/>
+            <column name="speed" remarks="Measured in RPM" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-50" author="Gear Shift (generated)">
+        <createTable tableName="water_pump_type">
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_waterpumptype"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-51" author="Gear Shift (generated)">
+        <createTable tableName="watercooler_fan">
+            <column name="fan_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_watercooler_fan"/>
+            </column>
+            <column name="watercooler_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_watercooler_fan"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1705475646848-52" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="air_cooler" constraintName="FK_AIRCOOLER_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="cooler"/>
+    </changeSet>
+    <changeSet id="1705475646848-53" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="computer_system_case"
+                                 constraintName="FK_COMPUTERSYSTEMCASE_ON_ID" onDelete="CASCADE"
+                                 referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-54" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="style" baseTableName="computer_system_case"
+                                 constraintName="FK_COMPUTERSYSTEMCASE_ON_STYLE" onDelete="SET NULL"
+                                 referencedColumnNames="name" referencedTableName="case_style"/>
+    </changeSet>
+    <changeSet id="1705475646848-55" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="computer_system_ip_address"
+                                 constraintName="FK_COMPUTERSYSTEMIPADDRESS_ON_ID" onDelete="CASCADE"
+                                 referencedColumnNames="id" referencedTableName="computer_system"/>
+    </changeSet>
+    <changeSet id="1705475646848-56" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="computer_system_type" baseTableName="computer_system"
+                                 constraintName="FK_COMPUTERSYSTEM_ON_COMPUTER_SYSTEM_TYPE" onDelete="SET NULL"
+                                 referencedColumnNames="name" referencedTableName="computer_system_type"/>
+    </changeSet>
+    <changeSet id="1705475646848-57" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="computer_system"
+                                 constraintName="FK_COMPUTERSYSTEM_ON_ID" onDelete="CASCADE" referencedColumnNames="id"
+                                 referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-58" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="container" constraintName="FK_CONTAINER_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="virtual_system"/>
+    </changeSet>
+    <changeSet id="1705475646848-59" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="cooler_type" baseTableName="cooler"
+                                 constraintName="FK_COOLER_ON_COOLER_TYPE" onDelete="SET NULL"
+                                 referencedColumnNames="name" referencedTableName="cooler_type"/>
+    </changeSet>
+    <changeSet id="1705475646848-60" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="cooler" constraintName="FK_COOLER_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-61" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="cpu" constraintName="FK_CPU_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-62" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="custom_water_loop"
+                                 constraintName="FK_CUSTOMWATERLOOP_ON_ID" onDelete="CASCADE" referencedColumnNames="id"
+                                 referencedTableName="cooler"/>
+    </changeSet>
+    <changeSet id="1705475646848-63" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="distribution_plate"
+                                 constraintName="FK_DISTRIBUTIONPLATE_ON_ID" onDelete="CASCADE"
+                                 referencedColumnNames="id" referencedTableName="custom_water_loop"/>
+    </changeSet>
+    <changeSet id="1705475646848-64" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="fan" constraintName="FK_FAN_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-65" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="size" baseTableName="fan" constraintName="FK_FAN_ON_SIZE"
+                                 onDelete="SET NULL" referencedColumnNames="size" referencedTableName="fan_size"/>
+    </changeSet>
+    <changeSet id="1705475646848-66" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="gpu" constraintName="FK_GPU_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="pcie_card"/>
+    </changeSet>
+    <changeSet id="1705475646848-67" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="hdd" constraintName="FK_HDD_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="storage"/>
+    </changeSet>
+    <changeSet id="1705475646848-68" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="last_updated_by" baseTableName="inventory_item"
+                                 constraintName="FK_INVENTORYITEM_ON_LAST_UPDATED_BY" onDelete="RESTRICT"
+                                 referencedColumnNames="username" referencedTableName="user"/>
+    </changeSet>
+    <changeSet id="1705475646848-69" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="location_id" baseTableName="inventory_item"
+                                 constraintName="FK_INVENTORYITEM_ON_LOCATION" onDelete="SET NULL"
+                                 referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-70" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="owner" baseTableName="inventory_item"
+                                 constraintName="FK_INVENTORYITEM_ON_OWNER" onDelete="CASCADE"
+                                 referencedColumnNames="username" referencedTableName="user"/>
+    </changeSet>
+    <changeSet id="1705475646848-71" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="status" baseTableName="inventory_item"
+                                 constraintName="FK_INVENTORYITEM_ON_STATUS" onDelete="CASCADE"
+                                 referencedColumnNames="name" referencedTableName="inventory_item_status"/>
+    </changeSet>
+    <changeSet id="1705475646848-72" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="system_id" baseTableName="inventory_item"
+                                 constraintName="FK_INVENTORYITEM_ON_SYSTEM" onDelete="SET NULL"
+                                 referencedColumnNames="id" referencedTableName="computer_system"/>
+    </changeSet>
+    <changeSet id="1705475646848-73" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="form_factor" baseTableName="motherboard"
+                                 constraintName="FK_MOTHERBOARD_ON_FORM_FACTOR" onDelete="SET NULL"
+                                 referencedColumnNames="name" referencedTableName="motherboard_form_factor"/>
+    </changeSet>
+    <changeSet id="1705475646848-74" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="motherboard" constraintName="FK_MOTHERBOARD_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-75" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="network_adapter"
+                                 constraintName="FK_NETWORKADAPTER_ON_ID" onDelete="CASCADE" referencedColumnNames="id"
+                                 referencedTableName="pcie_card"/>
+    </changeSet>
+    <changeSet id="1705475646848-76" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="port_type" baseTableName="network_adapter"
+                                 constraintName="FK_NETWORKADAPTER_ON_PORT_TYPE" onDelete="SET NULL"
+                                 referencedColumnNames="name" referencedTableName="network_port_type"/>
+    </changeSet>
+    <changeSet id="1705475646848-77" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="network_gear_port"
+                                 constraintName="FK_NETWORKGEARPORT_ON_ID" onDelete="CASCADE" referencedColumnNames="id"
+                                 referencedTableName="network_gear"/>
+    </changeSet>
+    <changeSet id="1705475646848-78" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="port_type" baseTableName="network_gear_port"
+                                 constraintName="FK_NETWORKGEARPORT_ON_PORT_TYPE" onDelete="SET NULL"
+                                 referencedColumnNames="name" referencedTableName="network_port_type"/>
+    </changeSet>
+    <changeSet id="1705475646848-79" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="network_gear" constraintName="FK_NETWORKGEAR_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-80" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="network_gear_type" baseTableName="network_gear"
+                                 constraintName="FK_NETWORKGEAR_ON_NETWORK_GEAR_TYPE" onDelete="SET NULL"
+                                 referencedColumnNames="name" referencedTableName="network_gear_type"/>
+    </changeSet>
+    <changeSet id="1705475646848-81" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="pcie_card" constraintName="FK_PCIECARD_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-82" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="form_factor" baseTableName="psu"
+                                 constraintName="FK_PSU_ON_FORM_FACTOR" onDelete="SET NULL" referencedColumnNames="name"
+                                 referencedTableName="psu_form_factor"/>
+    </changeSet>
+    <changeSet id="1705475646848-83" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="psu" constraintName="FK_PSU_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-84" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="rack" constraintName="FK_RACK_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-85" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="radiator" constraintName="FK_RADIATOR_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="custom_water_loop"/>
+    </changeSet>
+    <changeSet id="1705475646848-86" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="ram" constraintName="FK_RAM_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-87" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="resevoir" constraintName="FK_RESEVOIR_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="custom_water_loop"/>
+    </changeSet>
+    <changeSet id="1705475646848-88" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="ssd" constraintName="FK_SSD_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="storage"/>
+    </changeSet>
+    <changeSet id="1705475646848-89" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="cable_type" baseTableName="storage_adapter"
+                                 constraintName="FK_STORAGEADAPTER_ON_CABLE_TYPE" onDelete="SET NULL"
+                                 referencedColumnNames="name" referencedTableName="storage_cable_type"/>
+    </changeSet>
+    <changeSet id="1705475646848-90" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="storage_adapter"
+                                 constraintName="FK_STORAGEADAPTER_ON_ID" onDelete="CASCADE" referencedColumnNames="id"
+                                 referencedTableName="pcie_card"/>
+    </changeSet>
+    <changeSet id="1705475646848-91" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="storage" constraintName="FK_STORAGE_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-92" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="tubing" constraintName="FK_TUBING_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-93" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="ups" constraintName="FK_UPS_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-94" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="virtual_machine"
+                                 constraintName="FK_VIRTUALMACHINE_ON_ID" onDelete="CASCADE" referencedColumnNames="id"
+                                 referencedTableName="virtual_system"/>
+    </changeSet>
+    <changeSet id="1705475646848-95" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="host_id" baseTableName="virtual_system"
+                                 constraintName="FK_VIRTUALSYSTEM_ON_HOST" onDelete="SET NULL"
+                                 referencedColumnNames="id" referencedTableName="computer_system"/>
+    </changeSet>
+    <changeSet id="1705475646848-96" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="virtual_system"
+                                 constraintName="FK_VIRTUALSYSTEM_ON_ID" onDelete="CASCADE" referencedColumnNames="id"
+                                 referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-97" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="water_block" constraintName="FK_WATERBLOCK_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="custom_water_loop"/>
+    </changeSet>
+    <changeSet id="1705475646848-98" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="water_cooler" constraintName="FK_WATERCOOLER_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="cooler"/>
+    </changeSet>
+    <changeSet id="1705475646848-99" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="water_fitting"
+                                 constraintName="FK_WATERFITTING_ON_ID" onDelete="CASCADE" referencedColumnNames="id"
+                                 referencedTableName="custom_water_loop"/>
+    </changeSet>
+    <changeSet id="1705475646848-100" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="water_pump" constraintName="FK_WATERPUMP_ON_ID"
+                                 onDelete="CASCADE" referencedColumnNames="id" referencedTableName="custom_water_loop"/>
+    </changeSet>
+    <changeSet id="1705475646848-101" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="water_pump_type" baseTableName="water_pump"
+                                 constraintName="FK_WATERPUMP_ON_WATER_PUMP_TYPE" onDelete="SET NULL"
+                                 referencedColumnNames="name" referencedTableName="water_pump_type"/>
+    </changeSet>
+    <changeSet id="1705475646848-102" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="fan_id" baseTableName="aircooler_fan"
+                                 constraintName="fk_airfan_on_air_cooler" referencedColumnNames="id"
+                                 referencedTableName="air_cooler"/>
+    </changeSet>
+    <changeSet id="1705475646848-103" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="aircooler_id" baseTableName="aircooler_fan"
+                                 constraintName="fk_airfan_on_fan" referencedColumnNames="id"
+                                 referencedTableName="fan"/>
+    </changeSet>
+    <changeSet id="1705475646848-104" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="system_id" baseTableName="computer_system_extra_part"
+                                 constraintName="fk_comsysextpar_on_computer_system" referencedColumnNames="id"
+                                 referencedTableName="computer_system"/>
+    </changeSet>
+    <changeSet id="1705475646848-105" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="inventory_item_id" baseTableName="computer_system_extra_part"
+                                 constraintName="fk_comsysextpar_on_inventory_item" referencedColumnNames="id"
+                                 referencedTableName="inventory_item"/>
+    </changeSet>
+    <changeSet id="1705475646848-106" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="radiator_id" baseTableName="radiator_fan"
+                                 constraintName="fk_radfan_on_fan" referencedColumnNames="id"
+                                 referencedTableName="fan"/>
+    </changeSet>
+    <changeSet id="1705475646848-107" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="fan_id" baseTableName="radiator_fan"
+                                 constraintName="fk_radfan_on_radiator" referencedColumnNames="id"
+                                 referencedTableName="radiator"/>
+    </changeSet>
+    <changeSet id="1705475646848-108" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="customwaterloop_id" baseTableName="tubing_customwaterloop"
+                                 constraintName="fk_tubcus_on_custom_water_loop" referencedColumnNames="id"
+                                 referencedTableName="custom_water_loop"/>
+    </changeSet>
+    <changeSet id="1705475646848-109" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="tubing_id" baseTableName="tubing_customwaterloop"
+                                 constraintName="fk_tubcus_on_tubing" referencedColumnNames="id"
+                                 referencedTableName="tubing"/>
+    </changeSet>
+    <changeSet id="1705475646848-110" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="watercooler_id" baseTableName="watercooler_fan"
+                                 constraintName="fk_watfan_on_fan" referencedColumnNames="id"
+                                 referencedTableName="fan"/>
+    </changeSet>
+    <changeSet id="1705475646848-111" author="Gear Shift (generated)">
+        <addForeignKeyConstraint baseColumnNames="fan_id" baseTableName="watercooler_fan"
+                                 constraintName="fk_watfan_on_water_cooler" referencedColumnNames="id"
+                                 referencedTableName="water_cooler"/>
+    </changeSet>
+
+</databaseChangeLog>

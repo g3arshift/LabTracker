@@ -9,6 +9,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
+@Table(name = "computer_system_ip_address")
 public class ComputerSystemIpAddress {
 
     @Id
