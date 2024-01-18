@@ -5,6 +5,7 @@ import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import javax.imageio.IIOException;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -19,7 +20,10 @@ public class LabTrackerProperties {
 
     public LabTrackerProperties() {
         try {
-            defaultImage = ImageIO.read(new File("./images/default/inventoryitem.png"));
+            File defaultImageFile = new File("./images/default/inventoryitem.png");
+            if (defaultImageFile.exists()) {
+                defaultImage = ImageIO.read(defaultImageFile);
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

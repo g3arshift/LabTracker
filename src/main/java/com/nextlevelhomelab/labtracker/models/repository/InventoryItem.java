@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Clob;
@@ -29,6 +30,8 @@ import java.util.stream.Stream;
 public class InventoryItem {
 
     public InventoryItem() throws IOException {
+
+        labTrackerProperties = new LabTrackerProperties();
         //Load the base image for a file, or if not found, load the default.
         try {
             File imageFile = new File(String.format("%s/%s/%s_image.png", labTrackerProperties.getImageDirectory(), id, name));
@@ -42,15 +45,17 @@ public class InventoryItem {
 
         //Load all gallery images
         //Get list of files for all files in a given directory and make sure they are regular files.
-        try (Stream<Path> paths = Files.walk(Paths.get(String.format("%s/%s/%s/gallery", labTrackerProperties.getImageDirectory(), id, name)), 1)) {
-            List<File> filesInFolder = paths
-                    .map(Path::toFile)
-                    .toList();
+        if (id != null && name != null) {
+            try (Stream<Path> paths = Files.walk(Paths.get(String.format("%s/%s/%s/gallery", labTrackerProperties.getImageDirectory(), id, name)), 1)) {
+                List<File> filesInFolder = paths
+                        .map(Path::toFile)
+                        .toList();
 
-            //Make sure our files are an accepted image format, and load them into the gallery.
-            for (File f : filesInFolder) {
-                if (labTrackerProperties.getACCEPTED_IMAGE_TYPES().contains(Files.probeContentType(f.toPath()))) {
-                    gallery.add(ImageIO.read(f));
+                //Make sure our files are an accepted image format, and load them into the gallery.
+                for (File f : filesInFolder) {
+                    if (labTrackerProperties.getACCEPTED_IMAGE_TYPES().contains(Files.probeContentType(f.toPath()))) {
+                        gallery.add(ImageIO.read(f));
+                    }
                 }
             }
         }
@@ -84,7 +89,7 @@ public class InventoryItem {
     @Transient
     private List<BufferedImage> gallery;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @OnDelete(action = OnDeleteAction.SET_NULL)
     @JoinColumn(name = "location_id")
     private InventoryItem location;

@@ -506,4 +506,4 @@
 
 
 ###Part 2: Frontend
-* [ ] Use React
+* [ ] Use React and Typescript
